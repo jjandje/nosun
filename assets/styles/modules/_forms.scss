@@ -1,0 +1,237 @@
+::placeholder {
+	color: #999999;
+	font-size: 14px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #999999;
+	font-size: 14px;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+	color: #999999;
+	font-size: 14px;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+	color: #999999;
+	font-size: 14px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: #999999;
+	font-size: 14px;
+}
+
+input {
+	@include font-roboto();
+}
+
+/*** REMOVE LABEL ON FIELDS USING PLACEHOLDER ***/
+.gform_wrapper .top_label .gfield_label,
+.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+	display: none;
+}
+
+.gform_wrapper {
+	@include font-roboto();
+
+	/*** FIELD STYLING ***/
+	input[type=text],
+	textarea {
+		background: $c-white;
+		border-radius: 5px;
+		color: $c-mine-shaft !important;
+		padding: 15px !important;
+		border: 1px solid #999999;
+		width: 100% !important;
+	}
+
+	.gfield_required {
+		display: none;
+	}
+
+	.gfield_label {
+		@include font-roboto();
+		font-weight: 500 !important;
+		color: $c-mine-shaft;
+		font-size: 15px !important;
+	}
+
+	ul.gform_fields li.gfield {
+		padding-right: 0 !important;
+		padding-bottom: 10px;
+	}
+}
+
+.gform_wrapper .gform_footer {
+	text-align: center;
+}
+
+/*** BUTTON STYLING ***/
+.gform_wrapper .gform_footer input.button {
+	background-color: $c-medium-red-violet;
+	@include transition(400ms all);
+	border-radius: 30px;
+	color: $c-white;
+	text-transform: uppercase;
+	display: inline-block;
+	line-height: 1;
+	border: none;
+	padding: 12px;
+	margin: 0 !important;
+	font-size: 16px !important;
+	min-width: 310px;
+
+	@include susy-breakpoint(max-width $xs-max) {
+		line-height: 1 !important;
+		min-width: auto;
+		padding: 12px 0;
+	}
+
+	&:hover {
+		@include transition(400ms all);
+		background-color: darken($c-medium-red-violet, 6);
+	}
+}
+
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]) {
+	line-height: 1 !important;
+}
+
+/*** BUTTON HOVER STYLING ***/
+.gform_wrapper .gform_footer input.button:hover {
+	border: none;
+}
+
+.nosun-form {
+
+	label {
+		@include font-roboto(500);
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		cursor: pointer;
+		color: $c-mine-shaft;
+	}
+
+	input[type=text], input[type=email], select,
+	textarea {
+		background: $c-white;
+		border-radius: 5px;
+		color: $c-mine-shaft !important;
+		padding: 15px !important;
+		border: 1px solid #999999;
+		width: 100% !important;
+	}
+
+	select {
+		height: 48px;
+	}
+
+	.input {
+		width: 100%;
+		float: left;
+		border: 1px #999999 solid;
+		height: 48px;
+		line-height: 48px;
+		box-sizing: border-box;
+		padding: 0 15px;
+		font-size: 14px;
+		border-radius: 5px;
+		position: relative;
+	}
+
+
+
+	input,
+	select,
+	textarea {
+
+		&.error {
+			border-color: #e2ac4f;
+			background: #efe1c9;
+		}
+
+		&.valid {
+			border-color: #28a745;
+			background: #dff0d8;
+		}
+
+		&.loading {
+			background-color: #ffffff;
+			background-image: url("../images/loading.gif");
+			background-size: 25px 25px;
+			background-position: 97% center;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.hs-form {
+	fieldset {
+		padding: 15px 0 !important;
+		max-width: 100% !important;
+
+		.hs-form-field {
+			label {
+				@include font-roboto(500);
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				cursor: pointer;
+				color: $c-mine-shaft;
+			}
+
+			.input {
+				textarea {
+					&.hs-input {
+						height: 96px;
+					}
+				}
+
+				.hs-input {
+					width: 100%;
+					float: left;
+					border: 1px solid #999;
+					height: 48px;
+					box-sizing: border-box;
+					padding: 0 15px;
+					font-size: 14px;
+					border-radius: 5px;
+					position: relative;
+					background: $c-white;
+					border-radius: 5px;
+					color: $c-mine-shaft !important;
+					padding: 15px !important;
+					border: 1px solid #999999;
+					width: 100% !important;
+				}
+			}
+
+			ul.hs-error-msgs {
+				display: inline-block !important;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+		}
+	}
+	
+	.hs_submit {
+		padding: 15px 0;
+
+		.actions {
+			input[type="submit"] {
+				@include font-roboto();
+				@extend .btn;
+				@extend .btn--grey;
+				@extend .btn--arrow-white;
+				font-weight: 500;
+				text-transform: none;
+				font-size: 14px;
+				padding: 12px 30px;
+			}
+		}
+	}
+}

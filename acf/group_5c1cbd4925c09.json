@@ -1,0 +1,121 @@
+{
+    "key": "group_5c1cbd4925c09",
+    "title": "API Instellingen",
+    "fields": [
+        {
+            "key": "field_5c1cbd50ed5ef",
+            "label": "URL",
+            "name": "assumax_api_url",
+            "type": "select",
+            "instructions": "Kies hier tussen de Live en de Test API van het ERP systeem.\r\nBELANGRIJK: Wijzig dit niet tenzij je weet wat je aan het doen bent!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Live": "https:\/\/nosun-api.assumax.nl",
+                "Test": "https:\/\/nosun-api-test.assumax.nl"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c1cbdeded5f0",
+            "label": "Live server ID",
+            "name": "assumax_id_live",
+            "type": "text",
+            "instructions": "De ID die gebruikt wordt voor het authenticaten van de live server.\r\nBELANGRIJK: Wijzig dit niet tenzij je weet wat je aan het doen bent!",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c1cbe5ded5f1",
+            "label": "Live server Secret",
+            "name": "assumax_secret_live",
+            "type": "password",
+            "instructions": "De Secret die gebruikt wordt voor het authenticaten van de live server.\r\nBELANGRIJK: Wijzig dit niet tenzij je weet wat je aan het doen bent!",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5c1cbe90ed5f2",
+            "label": "Test server ID",
+            "name": "assumax_id_test",
+            "type": "text",
+            "instructions": "De Secret die gebruikt wordt voor het authenticaten van de test server.\r\nBELANGRIJK: Wijzig dit niet tenzij je weet wat je aan het doen bent!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c1cbeb6ed5f3",
+            "label": "Test server Secret",
+            "name": "assumax_secret_test",
+            "type": "password",
+            "instructions": "De Secret die gebruikt wordt voor het authenticaten van de test server.\r\nBELANGRIJK: Wijzig dit niet tenzij je weet wat je aan het doen bent!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-api-instellingen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1545393383
+}

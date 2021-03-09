@@ -1,0 +1,107 @@
+{
+    "key": "group_5ac5d73623a7b",
+    "title": "Content contact",
+    "fields": [
+        {
+            "key": "field_5ac5d7452a9df",
+            "label": "Contact",
+            "name": "flex_contact",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5ac5d77406964": {
+                    "key": "5ac5d77406964",
+                    "name": "flex_contact_faq",
+                    "label": "Bekijk ons overzicht veel gestelde vragen",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ac5d7982a9e0",
+                            "label": "Titel",
+                            "name": "flex_contact_faq_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Bekijk ook ons overzicht met veel gestelde vragen",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5ac5d8012a9e1",
+                            "label": "Knop tekst",
+                            "name": "flex_contact_faq_button_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Bekijk ook ons overzicht met veel gestelde vragen",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5ac5d8122a9e2",
+                            "label": "Knop URL",
+                            "name": "flex_contact_faq_button_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Nieuwe regel",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-contact.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1522915974
+}

@@ -1,0 +1,19 @@
+body.page-template-template-reiskalender {
+
+	.trip-month-wrapper {
+		padding-top: 30px;
+
+		.trip-month-title {
+			@include font-roboto(700);
+			@include span(12);
+			//padding-left: gutter();
+			font-size: 22px;
+
+		}
+	}
+
+	section.trip-blocks{
+		padding-top: 20px;
+		padding-bottom: 15px;
+	}
+}

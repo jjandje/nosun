@@ -1,0 +1,250 @@
+.row-padding {
+	padding-bottom: 40px;
+	padding-top: 40px;
+
+	&.bg-grey {
+		padding-bottom: 40px !important;
+	}
+}
+
+.content-row {
+	text-align: center;
+	padding-bottom: 40px;
+	position: relative;
+
+	@include susy-breakpoint(max-width $xs-max) {
+	}
+
+	&__inner {
+		@include span(10);
+		@include push(1);
+
+		@include susy-breakpoint(max-width $xs-max, $map-xs) {
+			@include span(12);
+			@include push(0);
+			text-align: left;
+		}
+	}
+
+	&__inner--left {
+		text-align: left !important;
+
+		h2 {
+			text-align: left !important;
+		}
+
+		p {
+			text-align: left !important;
+		}
+	}
+
+	p {
+		@include susy-breakpoint(max-width $xs-max, $map-xs) {
+			text-align: left !important;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+
+	.btn {
+		padding: 10px 30px 10px 30px;
+		min-width: 170px;
+		margin-top: 20px;
+		font-size: 15px;
+	}
+
+	.logo-wave {
+		display: none;
+		bottom: -30px;
+		height: 80px;
+		background-image: url("../images/logo-wave.svg");
+		background-repeat: no-repeat;
+		background-position: 150px 0;
+		position: absolute;
+		width: 100%;
+
+		@include susy-breakpoint(max-width $xs-max) {
+			display: block;
+			bottom: -9px;
+			right: 0;
+			height: 60px;
+			width: 365px;
+		}
+	}
+
+	ul{
+		list-style: disc;
+		margin-left: 30px;
+	}
+}
+
+.content-row-two {
+	text-align: center;
+
+	.page-title-border {
+		margin-bottom: 70px;
+	}
+
+	&__column {
+		@include span(6);
+		text-align: left;
+
+		@include susy-breakpoint(max-width $xs-max, $map-xs) {
+			@include span(12);
+			padding-bottom: gutter() * 2;
+		}
+
+		img {
+			@include img-responsive();
+		}
+
+		span {
+			@include font-roboto(700);
+			font-size: 18px;
+			display: block;
+			min-height: 31px;
+		}
+
+		p {
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.btn {
+		padding: 12px 30px;
+		margin-top: 20px;
+		clear: both;
+
+		@include susy-breakpoint(min-width $md-max) {
+			min-width: 180px;
+		}
+	}
+}
+
+.content-row-bg {
+	text-align: center;
+
+	h3 {
+		@include font-roboto(700);
+		display: inline-block;
+		text-align: center;
+		background-color: $c-white;
+		padding: 12px 50px;
+		border-radius: 5px;
+		font-size: 36px;
+		text-transform: uppercase;
+		color: $c-big-stone;
+		margin: 140px 0;
+
+		@include susy-breakpoint(max-width $xs-max) {
+			font-size: 24px;
+		}
+
+		@include susy-breakpoint(min-width $sm-max) {
+			min-width: 360px;
+		}
+	}
+}
+
+.destination-row {
+	text-align: center;
+
+	@include susy-breakpoint(max-width $xs-max) {
+		text-align: left;
+	}
+
+	h2 {
+		margin-bottom: 60px;
+	}
+
+	&__title {
+		@include font-roboto(500);
+		font-size: 18px;
+		position: relative;
+
+		@include susy-breakpoint(max-width $xs-max) {
+			padding-left: 50px;
+		}
+
+	}
+
+	&__column {
+		@include span(5);
+		@include push(1);
+		@include font-roboto();
+		text-align: left;
+		font-size: 14px;
+		position: relative;
+		padding-bottom: gutter() * 2;
+
+		@include susy-breakpoint(max-width $xs-max, $map-xs) {
+			@include span(12);
+			@include push(0);
+		}
+
+		a {
+			color: #c9398d;
+
+			&:hover {
+				color: darken(#c9398d, 20%);
+			}
+		}
+
+		img.country-icon {
+			position: absolute;
+			left: -42px;
+			height: 42px;
+			width: 42px;
+			top: -5px;
+
+			@include susy-breakpoint(max-width $xs-max, $map-xs) {
+				left: gutter();
+			}
+		}
+	}
+
+	.btn {
+		padding: 10px 40px;
+		min-width: 170px;
+		margin: 0 auto;
+	}
+}
+
+.known-row {
+
+	ul {
+		@include span(10);
+		@include push(1);
+		padding: 0;
+		display: flex;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		@include susy-breakpoint(max-width $xs-max, $map-xs) {
+			@include span(12 nest);
+			@include push(0);
+		}
+
+		li {
+			@include span(1.5);
+			text-align: center;
+			padding-bottom: gutter();
+
+			@include susy-breakpoint(max-width $xs-max, $map-xs) {
+				@include span(3);
+			}
+
+			img {
+				@include img-responsive();
+				margin: 0 auto;
+			}
+		}
+	}
+}

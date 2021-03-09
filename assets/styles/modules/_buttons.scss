@@ -1,0 +1,145 @@
+.btn {
+	@include transition(400ms all);
+	border-radius: 30px;
+	color: $c-white;
+	text-transform: uppercase;
+	display: inline-block;
+	line-height: 1.1;
+	text-decoration: none;
+	border: none;
+	font-size: 15px;
+
+	&:hover {
+		@include transition(400ms all);
+	}
+
+	&--blue {
+		@include font-roboto(600);
+		background-color: $c-big-stone;
+		text-transform: none;
+
+		&:hover {
+			background-color: $c-candlelight;
+			color: $c-big-stone;
+		}
+	}
+
+	&--grey {
+		@include font-roboto(500);
+		background-color: $c-catskill-white;
+		color: $c-big-stone;
+	}
+
+	&--transparant {
+		@include font-roboto(500);
+		background-color: #fff;
+		color: $c-big-stone;
+		border: 1px solid $c-big-stone;
+	}
+
+	&--pink {
+		@include font-roboto();
+		background-color: $c-medium-red-violet;
+
+		&:hover {
+			background-color: darken($c-medium-red-violet, 5);
+		}
+	}
+
+	&--yellow {
+		@include font-roboto(500);
+		background-color: $c-candlelight;
+		color: $c-big-stone;
+	}
+
+	&--white {
+		background-color: $c-white;
+		color: $c-big-stone;
+	}
+
+	&--arrow-white {
+		position: relative;
+		white-space: nowrap;
+
+		&:after {
+			@include transition(400ms all);
+			transition: all .4s;
+			height: 10px;
+			width: 6px;
+			background-size: cover;
+			position: absolute;
+			margin-left: 7px;
+			margin-top: 1px;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			content: "\f054";
+			font-size: 13px;
+		}
+
+		&:hover {
+
+			&:after {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	&--arrow-blue {
+		position: relative;
+		white-space: nowrap;
+
+		&:after {
+			@include transition(400ms all);
+			height: 10px;
+			width: 6px;
+			background-size: cover;
+			position: absolute;
+			margin-left: 7px;
+			margin-top: 1px;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			content: "\f054";
+			font-size: 13px;
+		}
+
+		&:hover {
+
+			&:after {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	&--disable {
+		pointer-events: none;
+		cursor: default;
+		text-decoration: none;
+		background: $c-catskill-white !important;
+	}
+
+	&--padding {
+		padding: 10px 40px;
+	}
+
+	&--small {
+		font-size: 12px !important;
+
+		&:after {
+			font-size: 10px !important;
+			margin-top: 1px;
+		}
+	}
+
+}
+
+.button-wrapper {
+	@include span(12);
+
+	@include susy-breakpoint(max-width $xs-max, $map-xs) {
+		@include span(12);
+	}
+
+	&.text-center {
+		text-align: center;
+	}
+}

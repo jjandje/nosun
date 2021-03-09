@@ -1,0 +1,265 @@
+{
+    "key": "group_5e4be5a9c1e48",
+    "title": "Reisgroep gegevens",
+    "fields": [
+        {
+            "key": "field_5e4be5af60040",
+            "label": "Reizigers",
+            "name": "travelgroup_customers",
+            "type": "repeater",
+            "instructions": "De reizigers die meegaan met deze reisgroep. Reizigers worden automatisch uit het ERP overgenomen en kunnen niet handmatig worden toegevoegd.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Nieuwe reiziger",
+            "sub_fields": [
+                {
+                    "key": "field_5e4be5e860041",
+                    "label": "Reiziger",
+                    "name": "assumax_id",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [],
+                    "default_value": [],
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e4be65a60042",
+                    "label": "Subgroep",
+                    "name": "subgroup",
+                    "type": "text",
+                    "instructions": "De subgroep binnen deze reisgroep waar de reiziger onder valt. Mag niet leeg zijn.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e4be68e60043",
+                    "label": "Actief",
+                    "name": "is_active",
+                    "type": "true_false",
+                    "instructions": "Of deze gebruiker meedeelt aan de (sub)groep. Reizigers kunnen alleen reisgroepen zien waarin zij actief zijn.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5e4be6da60044",
+                    "label": "Mail verzonden",
+                    "name": "mail_sent",
+                    "type": "true_false",
+                    "instructions": "Of de welkomstmail al verzonden is. Als dit veld op onwaar staat en de reiziger is actief binnen de reisgroep dan wordt er een mail verzonden zodra deze reisgroep wordt opgeslagen. Om dit te voorkomen kan dit veld preventief op waar gezet worden.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5e4be7ab60045",
+            "label": "Reisbegeleiders",
+            "name": "travelgroup_tourguides",
+            "type": "repeater",
+            "instructions": "De reisbegeleiders die meedelen aan deze reisgroep. De reisbegeleiders worden automatisch uit het ERP overgenomen en kunnen niet handmatig worden toegevoegd.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Nieuwe reisbegeleider",
+            "sub_fields": [
+                {
+                    "key": "field_5e4be82860046",
+                    "label": "Reisbegeleider",
+                    "name": "assumax_id",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [],
+                    "default_value": [],
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e4be96260047",
+                    "label": "Subgroepen",
+                    "name": "subgroups",
+                    "type": "repeater",
+                    "instructions": "De subgroepen waar de reisbegeleider bij hoort.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Nieuwe subgroep",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4be9ef60048",
+                            "label": "Subgroep",
+                            "name": "subgroup",
+                            "type": "text",
+                            "instructions": "Een subgroep waar de reisbegeleider bij hoort. Mag niet leeg zijn.",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5e4bea5a60049",
+            "label": "Reis",
+            "name": "travelgroup_trip",
+            "type": "post_object",
+            "instructions": "De reis waar deze reisgroep bij hoort.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_5e4beaa46004a",
+            "label": "Reis startdatum",
+            "name": "travelgroup_trip_start_date",
+            "type": "date_picker",
+            "instructions": "De datum wanneer de reis van start gaat.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "Y-m-d",
+            "first_day": 1
+        },
+        {
+            "key": "field_5ec4f22afa4ca",
+            "label": "Reis welkomtekst",
+            "name": "travelgroup_welcometext",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "travelgroup"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1589965388
+}

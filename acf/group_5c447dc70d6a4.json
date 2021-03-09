@@ -1,0 +1,43 @@
+{
+    "key": "group_5c447dc70d6a4",
+    "title": "Woocommerce Reports instellingen",
+    "fields": [
+        {
+            "key": "field_5c447ddbb7e1b",
+            "label": "Woocommerce Reports migratie toestaan",
+            "name": "woocommerce_report_migrate_enabled",
+            "type": "true_false",
+            "instructions": "Wanneer deze optie aan staat, wordt er in de database gecheckt of de woocommerce report tabellen nog up to date zijn met de modellen in de code. Het is beter om dit uit te laten staan tenzij je zeker weet wat je aan het doen bent.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-woocommerce-reports-instellingen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1547993232
+}

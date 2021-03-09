@@ -1,0 +1,83 @@
+.newsletter-container {
+  .newsletter-text-block {
+    @include span(4);
+
+    @include susy-breakpoint(max-width $xs-max) {
+      @include span(12);
+    }
+
+    .inner {
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        color: #c9398d;
+      }
+
+      p{
+        text-align: left;
+        width: 100%;
+        padding-left: 30px;
+
+      }
+    }
+  }
+
+  p.small {
+    width: 100%;
+    font-size: 13px;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .gform_wrapper .gform_body {
+    @include span(3);
+    @include push(3.5);
+    padding-top: 0;
+    margin-top: 0;
+    padding-right: 0;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      @include span(5);
+      @include push(2.5);
+    }
+  }
+
+  .gform_wrapper .gform_footer {
+    @include span(2);
+    clear: none;
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: left;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      @include span(3);
+    }
+
+    input.button {
+      font-weight: bold;
+    }
+  }
+
+  .gfield_label {
+    display: none !important;
+  }
+
+  .gform_wrapper input[type="text"], .gform_wrapper textarea {
+    border-radius: 25px;
+    background: none;
+    border: 1px solid $c-big-stone;
+    height: 47px;
+  }
+
+  input.button {
+    background: $c-big-stone !important;
+    min-width: auto !important;
+  }
+
+  .ginput_container {
+    width: 100%;
+  }
+}

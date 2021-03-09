@@ -1,0 +1,749 @@
+.page-template-template-booking {
+  header.site-header .sub-header {
+    display: none;
+  }
+
+  header {
+    border-bottom: 1px solid #17253f;
+  }
+
+  header.site-header .header-cta {
+    padding-top: 20px;
+  }
+
+  ul.header-cta__som {
+    display: none !important;
+  }
+}
+
+.booking-wrapper {
+
+  &__header {
+    @include span(12);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12);
+    }
+
+    li {
+      @include span(3 nest);
+      @include font-roboto();
+      font-size: 15px;
+      text-align: center;
+      padding: 12px 0;
+      position: relative;
+      border-radius: 5px;
+      border: 1px solid #dddddd;
+      border-right: 0;
+      color: $c-mine-shaft;
+
+      @include susy-breakpoint(max-width $xs-max, $map-xs) {
+        width: 100%;
+        background: $c-catskill-white;
+      }
+
+      &:last-of-type {
+        border-right: 1px solid #dddddd;
+      }
+
+      &.step-completed {
+        background-color: $c-big-stone;
+        color: $c-white;
+        border-color: $c-big-stone;
+        font-weight: 500;
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: -8px;
+          height: 18px;
+          width: 18px;
+          background-color: $c-big-stone;
+          transform: rotate(45deg);
+          z-index: 1;
+          top: 50%;
+          margin-top: -9px;
+          border-radius: 3px;
+
+          @include susy-breakpoint(max-width $xs-max) {
+            bottom: -8px;
+            top: auto;
+            transform: rotate(45deg);
+            left: 50%;
+            right: auto;
+            margin-top: 0;
+          }
+        }
+      }
+
+      &.step-active {
+        background-color: $c-candlelight;
+        color: $c-big-stone;
+        border-color: $c-candlelight;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__overview {
+    padding: 20px 0 0 0;
+
+    h2 {
+      margin-bottom: 45px;
+      font-size: 25px;
+      margin-top: 0;
+    }
+
+  }
+
+  .single-trip__ratings {
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.overview-wrapper {
+  @include span(5);
+  padding-bottom: 30px;
+
+  @include susy-breakpoint(max-width $xs-max, $map-xs) {
+    @include span(12);
+    @include push(0);
+  }
+
+  .inner {
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      padding: 20px;
+    }
+
+    &.why-nosun {
+      margin-top: 40px;
+
+      .column-title {
+        padding-bottom: 18px;
+      }
+
+    }
+    //
+    //&:before {
+    //	background: #17253f;
+    //	content: '';
+    //	height: calc(100% - 60px);
+    //	width: 1px;
+    //	position: absolute;
+    //	left: 50%;
+    //
+    //	@include susy-breakpoint(max-width $xs-max) {
+    //		display: none;
+    //	}
+    //}
+
+    h1 {
+    }
+
+    .single-trip__ratings {
+      text-align: left;
+      padding-top: 10px;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .rating-slider {
+        @include span(12 nest);
+        @include push(0);
+        padding-left: 0;
+        padding-right: 0;
+
+        .slick-prev {
+          top: 110%;
+          left: calc(50% - 55px);
+        }
+
+        .slick-next {
+          top: 110%;
+          right: calc(50% - 55px);
+        }
+      }
+    }
+
+  }
+
+  .product-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    background-position: center;
+    border-radius: 5px;
+    margin-bottom: 40px;
+
+    img {
+      @include img-responsive();
+    }
+  }
+
+  &__column {
+    @include span(12 nest);
+    position: relative;
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12);
+      position: relative;
+      padding: 0;
+    }
+
+    &.last {
+      // padding-left: 60px;
+      padding-top: 30px;
+
+      @include susy-breakpoint(max-width $xs-max, $map-xs) {
+        padding-left: 0;
+        padding-top: 30px;
+      }
+    }
+
+    hr {
+      width: 80%;
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    .column-title {
+      @include font-roboto(700);
+      font-size: 24px;
+      color: $c-big-stone;
+      display: block;
+      line-height: 1;
+      padding-bottom: 8px;
+      padding-right: 10px;
+    }
+
+    .column-subtitle {
+      color: $c-big-stone;
+      display: block;
+    }
+
+    .total_price {
+      @include font-roboto(700);
+      color: $c-big-stone;
+      font-size: 18px;
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+      line-height: 1.4;
+
+      @include susy-breakpoint(max-width $sm-max, $map-sm) {
+        position: relative;
+        right: auto;
+        padding-top: 20px;
+        bottom: auto;
+        display: block;
+      }
+
+      .woocommerce-Price-amount, .woocommerce-Price-currencySymbol {
+        font-size: 24px !important;
+        line-height: 1.4;
+      }
+    }
+
+    ul {
+
+      li {
+        @include font-roboto(500);
+        display: inline-block;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding-right: 6px;
+
+        img {
+          float: left;
+          margin-top: 3px;
+          padding-right: 4px;
+        }
+      }
+    }
+
+    table {
+      padding-top: 12px;
+      display: block;
+
+      .total {
+        text-transform: uppercase;
+      }
+
+      td, th {
+        @include font-roboto();
+        display: table-cell;
+        padding-right: 50px;
+        text-align: left;
+      }
+
+      th {
+        color: $c-mine-shaft;
+        font-size: 15px;
+      }
+
+      tr {
+
+        td {
+          font-size: 15px;
+          font-weight: normal;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+/*------------------------ BOEK FORMULIER -------------------------*/
+.booking-form {
+  @include span(7);
+  padding-top: 0;
+
+  @include susy-breakpoint(max-width $xs-max, $map-xs) {
+    @include span(12);
+    @include push(0);
+  }
+
+  &.step-3 {
+    @include span(10);
+    @include push(1);
+  }
+
+  h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 29px;
+  }
+
+  &__login {
+    text-align: center;
+  }
+
+  .login-btn {
+    @include font-roboto(500);
+    padding: 12px 30px;
+    text-transform: none;
+    font-size: 14px;
+  }
+
+  #bookform, #loginform {
+    @include span(12);
+    padding: 0;
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12);
+      @include push(0);
+    }
+  }
+
+  .login-popup {
+    padding-top: 40px;
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    button {
+      padding-top: 10px;
+    }
+
+    &__remember {
+      padding-top: 20px;
+      label {
+        font-weight: 400;
+        color: #666666;
+        width: auto;
+        display: inline-block;
+        padding-right: 30px;
+      }
+
+      a {
+        color: $c-mine-shaft;
+        text-decoration: underline;
+        font-weight: 400;
+      }
+    }
+
+    .woocommerce-Button {
+      @include font-roboto();
+      @extend .btn;
+      @extend .btn--grey;
+      @extend .btn--arrow-white;
+      font-weight: 500;
+      text-transform: none;
+      font-size: 14px;
+      padding: 12px 30px;
+    }
+  }
+
+  .column_full {
+    @include span(12);
+  }
+
+  ul.booking-form__column.column_full {
+    text-align: center;
+  }
+
+  .extra-traveler-block {
+    h3 {
+      @include span(12 nest);
+    }
+  }
+
+  .delete-extra-traveler {
+    color: lightgrey;
+    margin-left: 14px;
+    font-size: 14px;
+
+    &:hover {
+      color: #d40000;
+    }
+  }
+
+  &__column {
+    @include span(12 nest);
+    margin-bottom: gutter()*3;
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12 nest);
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      text-align: left;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    li {
+      padding: 9px 0;
+      float: left;
+      width: 100%;
+      box-sizing: border-box;
+      white-space: nowrap;
+
+      @include susy-breakpoint(max-width $xs-max) {
+        white-space: normal;
+      }
+
+      @include susy-breakpoint(max-width $xs-max) {
+        padding: 9px 0;
+      }
+
+      &.checkbox {
+        //padding-top: 36px;
+        padding-top: 10px;
+        text-align: left;
+
+        @include susy-breakpoint(max-width $sm-max) {
+          display: flex;
+          padding-top: 20px;
+
+          .icheckbox_square-yellow {
+            margin-top: 0 !important;
+            width: 37px;
+          }
+
+        }
+
+        .icheckbox_square-yellow {
+          margin-top: -23px;
+        }
+
+        input {
+          display: inline-block;
+          width: auto;
+          margin-top: 3px;
+          margin-right: 5px;
+        }
+
+        label {
+          font-weight: 400;
+          color: #333;
+          width: auto;
+          display: inline-block;
+          padding-left: 10px;
+
+          @include susy-breakpoint(max-width $sm-max) {
+            padding-left: 22px;
+          }
+
+        }
+
+        label.error {
+          margin-top: 25px;
+          padding-left: 37px;
+
+          @include susy-breakpoint(max-width $sm-max) {
+            margin-top: 43px;
+          }
+
+        }
+      }
+
+      label.error {
+        display: block;
+        float: left;
+        color: #e2ac4f;
+        line-height: 1.5;
+        margin-top: 10px;
+      }
+
+    }
+
+    a {
+      color: $c-mine-shaft;
+      text-decoration: underline;
+      font-weight: 400;
+    }
+
+  }
+
+  #add-extra-traveler {
+    @include font-roboto(700);
+    padding: 10px 40px 10px 23px;
+    line-height: 1;
+    font-size: 17px;
+    border-radius: 50px;
+    display: block;
+    text-transform: uppercase;
+    background: $c-white;
+    color: $c-big-stone;
+    border: 1px solid $c-big-stone;
+
+    &:hover {
+      background: $c-big-stone;
+      color: $c-white;
+    }
+
+    &:after {
+      position: absolute;
+      content: '\f067';
+      font-size: 6px;
+      margin-left: 7px;
+      margin-top: 0;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+  }
+
+  &__submit {
+    text-align: left;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      padding-top: 20px;
+    }
+
+    .btn {
+      @include font-roboto(700);
+      padding: 20px 55px;
+      line-height: 1;
+      font-size: 24px;
+      border-radius: 50px;
+      border: 0;
+      margin-bottom: 30px;
+
+      @include susy-breakpoint(max-width $xs-max) {
+        font-size: 18px;
+      }
+
+      &:after {
+        font-size: 20px;
+      }
+
+      &:disabled {
+        background: grey;
+
+        &:after {
+          display: none;
+        }
+
+      }
+    }
+
+    .loading {
+      display: none;
+      margin-top: -5px;
+
+      &.show {
+        display: block;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+
+      span {
+        color: #000;
+      }
+    }
+
+    ul {
+      padding-top: 10px;
+
+      li {
+        display: inline-block;
+        font-size: 13px;
+        padding-right: 30px;
+        font-weight: 400;
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+
+        label {
+          font-weight: 400;
+        }
+
+        a {
+          color: $c-mine-shaft;
+          text-decoration: underline;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .ui-datepicker {
+    display: none;
+  }
+
+  .progress {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    border: 1px #efefef solid;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+  }
+
+  .accordion {
+    margin-bottom: 30px;
+
+    & > .header {
+      padding: gutter();
+      background: #eaeef4;
+      font-weight: bold;
+      margin-bottom: 1px;
+      cursor: pointer;
+
+      &:hover {
+        background: #e4e8ee;
+      }
+    }
+
+    & > .content {
+      display: none;
+      //background: #f2f6fc;
+      padding-bottom: gutter();
+    }
+
+    .content:first-child {
+      background: #0f0;
+      border: 1px solid red;
+    }
+  }
+}
+
+#gform_4 {
+
+  span.ginput_product_price {
+    @include font-roboto(700);
+    color: #333333;
+    font-size: 15px;
+  }
+
+  .gform_footer {
+    text-align: left;
+  }
+
+  /*** BUTTON STYLING ***/
+  button.button {
+    background-color: $c-medium-red-violet;
+    @include transition(400ms all);
+    border-radius: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1;
+    border: none;
+    font-size: 14px;
+    padding: 10px 25px;
+    margin: 0 !important;
+    font-weight: 500;
+    color: $c-white;
+
+    .svg-inline--fa {
+      font-size: 14px;
+    }
+
+    &:hover {
+      @include transition(400ms all);
+      background-color: darken($c-medium-red-violet, 6);
+    }
+  }
+}
+
+.page-template-template-booking {
+  .usps {
+    background: #eaeef4;
+    margin-bottom: 20px;
+  }
+}
+
+.page-template-template-booked {
+  padding-top: 0;
+
+  .booked-redirect {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: url('https://132137-571797-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/03/home.jpg') center center;
+    background-size: cover;
+
+    .header-title {
+      margin-top: 50px;
+
+      .logo {
+        max-width: 250px;
+        margin: 0 20px 20px 20px;
+      }
+
+      h1 {
+        font-family: Roboto, sans-serif;
+        color: #17253f;
+        font-size: 20px;
+      }
+
+      p {
+        font-family: Roboto, sans-serif;
+        color: #17253f;
+      }
+
+      .loader {
+        display: inline-block;
+      }
+    }
+  }
+}

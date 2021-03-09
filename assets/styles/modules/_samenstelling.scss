@@ -1,0 +1,140 @@
+.samenstelling {
+	max-width: 450px;
+	color: #002f52;
+	padding: 30px;
+	text-align: left;
+
+	.title {
+		display: inline-block;
+		font-size: 18px;
+		font-weight: bold;
+		width: 100%;
+		padding-left: 15px;
+	}
+
+	.date {
+		width: 100%;
+		display: inline-block;
+		padding-left: 15px;
+	}
+
+	.geslacht {
+		font-size: 14px;
+		margin-top: 15px;
+
+		.title {
+			padding-bottom: 10px;
+			font-size: 14px;
+		}
+
+
+
+		.inner {
+			background: $c-catskill-white;
+			width: 100%;
+			display: inline-block;
+			padding: 15px;
+			box-sizing: border-box !important;
+
+			.title {
+				padding-left: 0;
+				float: left;
+				width: 100%;
+				box-sizing: border-box;
+				font-weight: normal;
+			}
+
+			.mannen {
+				float: left;
+				margin-right: 15px;
+			}
+
+			.vrouwen {
+				float: left;
+			}
+		}
+	}
+
+	.leeftijd {
+		font-size: 14px;
+		margin-top: 15px;
+	}
+
+	.leeftijd .male,
+	.leeftijd .female {
+		display: inline-block;
+		padding: 0 3px;
+	}
+
+	.leeftijd .title {
+		padding-bottom: 10px;
+		font-size: 14px;
+	}
+
+	.leeftijd .inner {
+		background: $c-catskill-white;
+		width: 100%;
+		display: inline-block;
+		padding: 15px;
+		box-sizing: border-box !important;
+
+		.title {
+			font-weight: normal;
+			padding-left: 5px;
+		}
+	}
+
+	.leeftijd .inner .age2025,
+	.leeftijd .inner .age2635,
+	.leeftijd .inner .age3650 {
+		float: left;
+		width: 33%;
+		box-sizing: border-box !important;
+		padding-right: 15px;
+	}
+
+	.leeftijd .inner .age4049,
+	.leeftijd .inner .age5059 {
+		float: left;
+		width: 50%;
+		box-sizing: border-box !important;
+		padding-right: 15px;
+	}
+}
+
+.samenstelling .geslacht .inner
+.samenstelling .fa-circle,
+.samenstelling .fa-female,
+.samenstelling .fa-male {
+	margin-right: 5px;
+}
+
+.samenstelling .leeftijd .inner .fa-female,
+.samenstelling .leeftijd .inner .fa-male {
+	font-size: 20px;
+}
+
+.samenstelling strong {
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	margin: 15px 0;
+	display: inline-block;
+}
+
+.samenstelling .center {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+.samenstelling .btn {
+	font-weight: 500;
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	color: #fff;
+}

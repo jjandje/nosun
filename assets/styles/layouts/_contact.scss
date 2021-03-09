@@ -1,0 +1,122 @@
+.contact-wrapper{
+	padding-top: 90px;
+
+	h2{
+		margin: 0;
+		color: $c-big-stone;
+		font-size: 24px;
+		padding-bottom: 45px;
+
+		&:first-of-type{
+			padding-bottom: 0;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__form{
+		@include span(6);
+		@include push(3);
+		padding-bottom: 60px;
+
+		@include susy-breakpoint(max-width $xs-max, $map-xs){
+			@include span(12);
+			@include push(0);
+		}
+	}
+
+	&__faq{
+		background: $c-catskill-white;
+		text-align: center;
+		padding-top: 40px;
+		padding-bottom: 50px;
+
+		.btn{
+			@include font-roboto(500);
+			min-width: 310px;
+			text-decoration: none;
+			padding: 12px 40px;
+		}
+	}
+
+	&__company{
+		padding-top: 85px;
+		padding-bottom: 90px;
+
+		h2{
+			display: block;
+			text-align: center;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__column{
+		@include push(2);
+		@include span(4);
+		position: relative;
+
+		@include susy-breakpoint(max-width $xs-max, $map-xs){
+			@include span(12);
+			@include push(0);
+		}
+
+		&:before{
+			position: absolute;
+			right: 0;
+			height: 100%;
+			background: $c-big-stone;
+			width: 1px;
+			content: '';
+		}
+
+		&:last-of-type{
+			@include push(1);
+
+			@include susy-breakpoint(max-width $xs-max, $map-xs){
+				@include push(0);
+				padding-top: gutter() * 2;
+			}
+
+			&:before{
+				display: none;
+			}
+
+		}
+
+		p{
+			color: $c-mine-shaft;
+			margin: 0;
+
+			a{
+				text-decoration: none;
+				color: inherit;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+
+			.small{
+				font-style: italic;
+				font-size: 12px;
+				padding-top: 10px;
+				display: block;
+			}
+		}
+	}
+}
+
+#nosun-map {
+	width: 100%;
+	height: 440px;
+	background-color: grey;
+
+	.firstHeading{
+
+		a{
+			@extend .btn;
+			@extend .btn--blue;
+			padding: 10px 15px;
+			margin-top: 15px;
+		}
+	}
+}

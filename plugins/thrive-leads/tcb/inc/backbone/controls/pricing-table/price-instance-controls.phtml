@@ -1,0 +1,39 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ovidi
+ * Date: 6/30/2018
+ * Time: 12:17 PM
+ */
+?>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="tve-price-box-default-control"></div>
+	</div>
+</div>
+<hr class="margin-bottom-10 margin-top-5">
+<div class="row">
+	<div class="col-xs-6 padding-top-10"><?php echo __( 'Price Boxes', 'thrive-cb' ); ?></div>
+	<div class="col-xs-6 margin-top-5">
+		<button class="tcb-right tve-button blue click" id="tcb-add-price-box-item" data-fn="add_price_box">
+			<?php echo __( 'ADD NEW', 'thrive-cb' ) ?>
+		</button>
+	</div>
+</div>
+<hr class="margin-bottom-5">
+<div class="tve-price-box-preview-list-control"></div>
+<hr class="margin-bottom-0 hide-mobile">
+<div class="row hide-mobile">
+	<div class="col-xs-12 margin-top-10">
+		<div class="tve-price-box-gutter-width-control"></div>
+	</div>
+	<hr class="margin-left-10 margin-right-10">
+	<div class="col-xs-12">
+		<div class="tve-price-box-wrap-control"></div>
+		<span class="blue-text"><?php tcb_icon( 'info' ) ?></span>
+		<span class="info-text"><?php echo __( 'If you enable wrapping, the price boxes will not be resizable anymore', 'thrive-cb' ) ?></span>
+	</div>
+	<div class="col-xs-12 margin-top-10">
+		<div class="tve-price-box-column-width-control"></div>
+	</div>
+</div>

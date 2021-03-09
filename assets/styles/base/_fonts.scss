@@ -1,0 +1,31 @@
+
+
+
+@font-face {
+	font-family: 'Uni Neue';
+	src: url('../fonts/UniNeueRegular.eot');
+	src: url('../fonts/UniNeueRegular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/UniNeueRegular.woff2') format('woff2'),
+	url('../fonts/UniNeueRegular.woff') format('woff'),
+	url('../fonts/UniNeueRegular.ttf') format('truetype'),
+	url('../fonts/UniNeueRegular.svg#UniNeueRegular') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@mixin font-uni-neue($weight: 400){
+	font-family: 'Uni Neue', sans-serif;
+	font-weight: $weight;
+}
+
+@mixin font-roboto($weight: 400) {
+	font-family: 'Roboto', sans-serif;
+	font-weight: $weight;
+}
+
+@mixin font-open-sans($weight: 400) {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: $weight;
+}
+
+

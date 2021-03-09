@@ -1,0 +1,51 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "admin.js": {
+      "files": [
+        "scripts/admin.js"
+      ]
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "email-module.css": {
+      "files": [
+        "styles/email-module.scss"
+      ]
+    },
+    "email-module.js": {
+      "files": [
+        "scripts/email-module.js"
+      ]
+    },
+    "reports.css": {
+      "files": [
+        "styles/reports.scss"
+      ]
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "reports.js": {
+      "files": ["scripts/reports.js"],
+      "bower": ["chart.js", "table.sort"]
+    }
+  },
+  "config": {
+    "devUrl": "http://nosun.localhost"
+  }
+}

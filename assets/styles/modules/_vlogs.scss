@@ -1,0 +1,146 @@
+.vlogs {
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+body.home {
+
+	.usps {
+		padding-top: 8px;
+		padding-bottom: 82px;
+
+		@include susy-breakpoint(max-width $xs-max) {
+			padding-bottom: 50px;
+		}
+	}
+}
+
+.vlog {
+	@include span(4);
+	margin-bottom: 40px;
+	display: inline-block;
+	text-decoration: none;
+
+	@include susy-breakpoint(max-width $xs-max, $map-xs) {
+		@include span(12);
+		padding-bottom: 0;
+	}
+
+	@include susy-breakpoint($sm-min $sm-max, $map-sm) {
+		@include span(6);
+		padding-bottom: gutter() * 2;
+	}
+
+	.vlog__inner {
+		background-color: $c-big-stone;
+		border-radius: 5px;
+		text-align: left;
+		padding: 23px;
+		height: 100%;
+		display: block;
+
+		i {
+			color: $c-candlelight;
+		}
+
+		@include susy-breakpoint(max-width $xs-max) {
+			text-align: left;
+			border-radius: 0;
+			padding: 5px 15px;
+		}
+
+		.image {
+			border: 2px solid #fff;
+			height: 175px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 10px;
+			margin-bottom: 18px;
+			position: relative;
+		}
+
+		.play-button {
+			position: absolute;
+			width: 65px;
+			height: auto;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+		span.title {
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		span {
+			font-weight: 500;
+			color: $c-white;
+			font-size: 17px;
+			line-height: 1.55;
+			padding-bottom: 6px;
+			display: block;
+
+			@include susy-breakpoint(max-width $xs-max) {
+				font-size: 15px;
+
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+
+}
+
+.usps-booking {
+	padding-top: 0;
+	padding-bottom: 0;
+
+	.usp {
+		@include span(12 nest);
+		padding-bottom: 0;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+
+		@include susy-breakpoint(max-width $xs-max, $map-xs) {
+			@include span(12 nest);
+			padding-bottom: 0;
+		}
+
+		.usp__inner {
+			background-color: transparent;
+			height: 100%;
+			text-align: left;
+			border-radius: 0;
+			padding: 5px 0;
+		}
+
+		img {
+			margin: 0 auto;
+			display: inline-block;
+			width: 20px;
+			height: auto;
+			padding-bottom: 0;
+			float: left;
+			margin-right: 10px;
+		}
+
+		span {
+			font-weight: normal;
+			color: #17253f;
+			font-size: 15px;
+			line-height: 1.55;
+			padding-bottom: 0;
+			display: block;
+
+			br {
+				display: none;
+			}
+		}
+
+	}
+}

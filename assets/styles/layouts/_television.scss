@@ -1,0 +1,32 @@
+.page-template-template-televisie{
+	text-align: center;
+	padding-top: 0;
+	margin-top: -32px;
+
+	#wpadminbar{
+		display: none;
+	}
+
+	main{
+		height: 100vh;
+	}
+
+	.site-header, .site-footer{
+		display: none;
+	}
+
+	#calendar{
+		max-width: 100%;
+		display: inline-block;
+		max-height: calc(100vh - 30px);
+	}
+
+	.fc-title{
+		color: #fff;
+	}
+
+	.fc-popover .fc-widget-header{
+		background-color: #17253f;
+	}
+
+}

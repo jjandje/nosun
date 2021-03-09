@@ -1,0 +1,158 @@
+{
+    "key": "group_5d4401583ef06",
+    "title": "Document gegevens",
+    "fields": [
+        {
+            "key": "field_5e9d44831cea6",
+            "label": "Titel",
+            "name": "document_title",
+            "type": "text",
+            "instructions": "Titel van het document, ook wel het document nummer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d44016276996",
+            "label": "Type",
+            "name": "document_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Paspoort",
+                "2": "Identiteitskaart",
+                "4": "Visa",
+                "8": "Verzekering"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d4401e276998",
+            "label": "Verloopdatum",
+            "name": "document_expires",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "Y-m-d",
+            "first_day": 1
+        },
+        {
+            "key": "field_5d44020876999",
+            "label": "Land van afgifte",
+            "name": "document_country_id",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "België",
+                "37": "Bulgarije",
+                "17": "Canada",
+                "18": "Denemarken",
+                "16": "Duitsland",
+                "2": "Engeland",
+                "23": "Europa",
+                "28": "Faeröer eilanden",
+                "3": "Finland",
+                "4": "Frankrijk",
+                "25": "Groot-Brittannië",
+                "5": "IJsland",
+                "6": "Ierland",
+                "7": "Italië",
+                "8": "Kroatië",
+                "19": "Lapland",
+                "27": "Madeira",
+                "22": "Mallorca",
+                "9": "Nederland",
+                "26": "Noord-Ierland",
+                "10": "Noorwegen",
+                "11": "Oostenrijk",
+                "20": "Portugal",
+                "21": "Sardinië",
+                "24": "Scandinavië",
+                "12": "Schotland",
+                "13": "Spanje",
+                "14": "Zweden",
+                "15": "Zwitserland"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d4403ed7699a",
+            "label": "Plaats van afgifte",
+            "name": "document_city",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "document"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1587365036
+}

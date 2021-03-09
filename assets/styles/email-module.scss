@@ -1,0 +1,43 @@
+.email_shortcodes_display {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 16px;
+  width: 100%;
+
+  th, td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+}
+
+.trigger {
+  border: 1px solid #ddd;
+  padding: 0 10px 10px 10px;
+  margin-top: 16px;
+  display: none;
+
+  .events input[type="text"], select {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .required {
+    color: red;
+  }
+
+  .new {
+    margin-top: 16px;
+  }
+
+  .event-template {
+    display: none;
+  }
+}
+
+p {
+  white-space: pre;
+}

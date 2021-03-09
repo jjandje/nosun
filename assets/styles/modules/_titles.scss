@@ -1,0 +1,99 @@
+.page-title-border{
+	@include font-roboto(700);
+	font-size: 33px;
+	display: block;
+	text-align: center;
+	color: $c-big-stone;
+	position: relative;
+	text-transform: uppercase;
+	width: 100%;
+  margin-bottom: 0;
+
+	&.lowercase {
+		text-transform: none;
+		margin-bottom: 55px;
+		font-weight: bold;
+
+		&:after {
+			background: $c-big-stone;
+			bottom: -18px;
+			top: auto;
+		}
+	}
+
+	&.large {
+		font-size: 40px;
+
+    @include susy-breakpoint(max-width $sm-max, $map-sm) {
+      font-size: 32px;
+    }
+	}
+
+	&.white {
+		text-transform: none;
+		margin-bottom: 55px;
+		font-weight: bold;
+		color: #fff;
+
+		&:after {
+			background: $c-candlelight;
+			bottom: -18px;
+			top: auto;
+		}
+	}
+
+	@include susy-breakpoint(max-width $xs-max){
+		font-size: 22px;
+	}
+
+	&:after{
+		content: "";
+		width: 60px;
+		background: $c-candlelight;
+		position: absolute;
+		top: -18px;
+		height: 3px;
+		left: 50%;
+		margin-left: -30px;
+	}
+
+	&--left{
+		@include span(12);
+		text-align: left;
+		margin-bottom: 30px !important;
+		text-transform: none;
+		font-size: 24px;
+
+		&:after{
+			display: none;
+		}
+	}
+}
+
+.regular-title{
+	@include font-roboto(700);
+	font-size: 24px;
+	margin: 0 0 20px;
+	color: $c-big-stone;
+}
+
+.p-no-margin{
+	margin: 0;
+}
+
+.title-wrapper{
+	@include span(12);
+
+	@include susy-breakpoint(max-width $xs-max, $map-xs){
+		@include span(12);
+
+		h2, h3{
+			text-align: left;
+
+			&:after{
+				left: 0;
+				margin-left: 0;
+			}
+		}
+	}
+}

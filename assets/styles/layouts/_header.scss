@@ -1,0 +1,537 @@
+header.site-header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background: $c-white;
+  z-index: 999;
+
+  &.show-notice {
+    @include transition(400ms all);
+    top: 39px;
+  }
+
+  .container {
+
+    @include susy-breakpoint(max-width $xs-max) {
+      -webkit-box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .sub-header {
+    background: $c-big-stone;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      @include transition(400ms all);
+      opacity: 1;
+      overflow: hidden;
+      height: 36px;
+    }
+
+    .mobile-quote {
+      @include font-uni-neue();
+      display: none;
+      color: $c-white;
+      font-size: 14px;
+      text-align: center;
+      line-height: 2.6;
+      overflow: hidden;
+
+      @include susy-breakpoint(max-width $xs-max) {
+        display: block;
+      }
+
+    }
+
+    &__nav {
+      @include span(12);
+      text-align: center;
+
+      @include susy-breakpoint(max-width $sm-max) {
+        display: none;
+      }
+    }
+  }
+
+  .header-menu {
+    float: right;
+
+    @include susy-breakpoint(max-width $sm-max) {
+      display: none;
+    }
+
+    ul {
+      margin-top: 10px;
+      margin-bottom: 0;
+
+      li {
+        display: inline-block;
+        padding: 0 10px;
+        position: relative;
+
+        &:after {
+          content: "|";
+          position: absolute;
+          top: 0;
+          right: -5px;
+        }
+
+        &:last-of-type {
+          &:after {
+            display: none;
+          }
+        }
+
+        a{
+          color: $c-big-stone;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+
+  ul.nav {
+    padding: 0;
+    margin: 0;
+
+    > li {
+      display: inline-block;
+      position: relative;
+      margin: 0 20px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:hover {
+
+        > a:after {
+          width: 100%;
+          opacity: 1;
+        }
+
+        ul {
+          @include transition(400ms all);
+          visibility: visible;
+          opacity: 1;
+          top: 53px;
+        }
+      }
+
+      &.menu-item-has-children {
+        &:hover {
+        }
+      }
+
+      @include susy-breakpoint($md-min $md-max) {
+        margin: 0 15px;
+      }
+
+      &.current-menu-item, &.current-menu-parent {
+        a:after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+
+      > a {
+        @include transition(400ms all);
+        @include font-roboto(500);
+        padding: 14px 0;
+        display: inline-block;
+        text-transform: uppercase;
+        color: $c-white;
+        text-decoration: none;
+        font-size: 15px;
+
+        &:after {
+          @include transition(400ms all);
+          position: absolute;
+          bottom: 0;
+          height: 3px;
+          background-color: $c-candlelight;
+          width: 0;
+          content: '';
+          left: 0;
+          opacity: 0;
+        }
+      }
+
+      ul {
+        background: $c-big-stone;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 50px;
+        z-index: 0;
+        left: -30px;
+        //left: 50%;
+        //transform: translate(-50%, 0);
+        padding: 15px 30px;
+        min-width: 220px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -ms-transition: all .3s;
+        transition: all .3s;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden; /* Chrome and Safari */
+        -moz-backface-visibility: hidden; /* Firefox */
+        -ms-backface-visibility: hidden; /* Internet Explorer */
+
+        li {
+          text-align: left;
+          white-space: nowrap;
+
+          a {
+            @include transition(400ms all);
+            color: $c-white;
+            font-weight: 400;
+            text-decoration: none;
+            position: relative;
+            font-size: 15px;
+            padding-left: 0;
+
+            &:hover {
+              @include transition(400ms all);
+              color: $c-candlelight;
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .sub-menu-title {
+      margin-bottom: 10px;
+
+      a {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+
+      &:hover {
+        a{
+          padding-left: 0 !important;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .link-all {
+      margin-top: 15px;
+
+      a {
+        border-top: 1px solid #fff;
+        padding-top: 10px;
+      }
+    }
+
+  }
+
+  .brand {
+    @include span(5);
+    padding-top: 14px;
+    padding-bottom: 26px;
+    display: inline-block;
+    margin-top: -20px;
+
+    @include susy-breakpoint($sm-min $sm-max, $map-sm) {
+      @include span(10);
+      margin-top: 0;
+    }
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(6);
+      margin-top: 0;
+    }
+
+    @include susy-breakpoint(max-width $sm-max) {
+      padding-top: 24px;
+      padding-bottom: 15px;
+    }
+
+    img {
+      height: 47px;
+      width: 159px;
+
+      @include susy-breakpoint(max-width $sm-max) {
+        width: 101px;
+        height: 30px;
+      }
+    }
+
+    a {
+      float: left;
+    }
+
+    &__quote {
+      @include font-uni-neue();
+      display: inline-block;
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 1.125;
+      color: $c-big-stone;
+      float: left;
+      margin-top: 13px;
+
+      @include susy-breakpoint(max-width $xs-max) {
+        display: none;
+      }
+    }
+  }
+
+  .header-cta {
+    @include span(7);
+    padding-top: 10px;
+    text-align: right;
+
+    @include susy-breakpoint(max-width $sm-max) {
+      display: none;
+    }
+
+    .btn {
+      display: inline-block;
+      font-size: 17px;
+      padding: 10px 0;
+      text-decoration: none;
+      line-height: 1;
+      margin-left: 20px;
+      width: 160px;
+      text-align: center;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &.btn-logout {
+        padding: 10px 0;
+        width: 50px;
+      }
+    }
+
+    ul.header-cta__som {
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        padding-left: 25px;
+
+        @include susy-breakpoint($md-min $md-max) {
+          padding-left: 20px;
+        }
+
+        a {
+          @include transition(400ms all);
+          color: $c-big-stone;
+          font-size: 22px;
+
+          &:hover {
+            @include transition(400ms all);
+            color: $c-candlelight;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-header {
+  padding-top: 80px;
+  padding-bottom: 110px;
+  background-color: $c-catskill-white;
+  width: 100%;
+  text-align: center;
+
+  &--subtitle {
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  span {
+    display: block;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+}
+
+.page-header-image {
+  //padding-top: 150px;
+  padding-top: 12vh;
+  padding-bottom: 18vh;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  max-height: 400px;
+
+  &.blog-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 522px;
+    display: table;
+    width: 100%;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      height: inherit!important;
+    }
+
+    .inner {
+      display: table-cell;
+      vertical-align: middle;
+      height: 522px;
+
+      @include susy-breakpoint(max-width $xs-max) {
+        height: inherit!important;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  @include susy-breakpoint(max-width $xs-max) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  h1 {
+    @include font-roboto(700);
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    background-color: $c-white;
+    padding: 12px 50px;
+    border-radius: 5px;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: $c-big-stone;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      font-size: 24px;
+    }
+
+    @include susy-breakpoint(min-width $sm-max) {
+      min-width: 360px;
+    }
+  }
+
+  h2 {
+    @include font-roboto();
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    background-color: $c-big-stone;
+    padding: 12px 50px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: $c-white;
+    margin-top: 12px;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      font-size: 16px;
+      padding: 12px 30px;
+    }
+  }
+}
+
+.menu-button {
+  display: none;
+  text-align: center;
+  position: absolute;
+  right: gutter() * 2;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  margin-top: -45px;
+  z-index: 9999;
+  transform: scale(0.8);
+
+  @include susy-breakpoint(max-width $xs-max) {
+    top: 18px;
+    margin-top: 0;
+  }
+
+  @include susy-breakpoint(max-width $sm-max) {
+    display: block;
+  }
+
+  @include susy-breakpoint($sm-min $sm-max) {
+    margin-top: -28px;
+  }
+
+  .hambergerIcon {
+    height: 6px;
+    width: 50px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    border-radius: 50px;
+    background-color: black;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: all ease 0.5s;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      height: inherit;
+      border-radius: inherit;
+      background-color: inherit;
+      margin: auto;
+      width: 50%;
+      transition: all ease 0.5s;
+    }
+
+    &::before {
+      top: -13px;
+      left: 0;
+      transform-origin: left;
+    }
+
+    &::after {
+      bottom: -13px;
+      right: 0;
+      transform-origin: right;
+    }
+  }
+
+  .open {
+    transform: translate(-50%, -50%) rotate(135deg);
+
+    &::before {
+      top: 0;
+      transform: translateX(100%) rotate(-90deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: translateX(-100%) rotate(-90deg);
+    }
+  }
+}
+
+.animate-dropdown {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Chrome and Safari */
+  -moz-backface-visibility: hidden; /* Firefox */
+  -ms-backface-visibility: hidden; /* Internet Explorer */
+}

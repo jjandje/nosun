@@ -1,0 +1,56 @@
+.breadcrumb-wrapper {
+	@include span(12);
+	padding-left: gutter();
+
+	@include susy-breakpoint(max-width $xs-max, $map-xs){
+		@include span(12);
+	}
+
+	@include susy-breakpoint($sm-min $sm-max, $map-sm){
+		@include span(12);
+	}
+
+	#breadcrumbs {
+		font-size: 13px;
+
+		span{
+			color: #999999;
+			font-size: 13px;
+		}
+
+		a {
+			@include font-roboto();
+			color: #999999;
+			text-decoration: none;
+			font-size: 13px;
+		}
+
+		span.breadcrumb_last {
+			@include font-roboto(500);
+			color: $c-big-stone;
+		}
+	}
+}
+
+
+body.single-product{
+	.breadcrumb-wrapper{
+		text-align: left;
+		padding-bottom: 0;
+
+		#breadcrumbs {
+
+			span{
+				color: $c-big-stone;
+			}
+
+			a {
+				color: $c-big-stone;
+			}
+
+			span.breadcrumb_last {
+				color: $c-big-stone;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+    "name": "vazquez/nosun-assumax-connector",
+    "authors": [
+        {
+            "name": "Erkan Kuzucu",
+            "email": "erkan@trifix.online"
+        },
+        {
+            "name": "Chris van Zanten",
+            "email": "chris@vazquez.nl"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vazquez\\NosunAssumaxConnector\\": "includes"
+        }
+    }
+}

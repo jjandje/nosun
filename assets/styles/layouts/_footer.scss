@@ -1,0 +1,488 @@
+.site-footer {
+	background: $c-big-stone;
+	color: #FFF;
+	float: left;
+	padding: 50px 0;
+	width: 100%;
+	position: relative;
+	margin-top: 150px;
+
+	@include susy-breakpoint(max-width $xs-max) {
+		padding-top: 0;
+	}
+
+	.footer-text {
+		@include span(8);
+		@include push(2);
+		text-align: center;
+		padding-bottom: 70px;
+
+		p {
+			color: #fff;
+		}
+	}
+
+	.logo-wave {
+		max-width: 450px;
+		position: absolute;
+		top: -82px;
+		left: -10px;
+
+		@include susy-breakpoint(max-width $xs-max) {
+			display: none;
+		}
+	}
+
+	&__brand {
+		margin-bottom: 36px;
+		display: inline-block;
+
+		@include susy-breakpoint(max-width $xs-max) {
+			display: none;
+		}
+
+		img {
+			height: 41px;
+			width: 140px;
+		}
+	}
+
+	&__som {
+		padding: 30px 0 0;
+		margin: 0;
+
+		li {
+			list-style: none;
+			display: inline-block;
+			padding-right: 16px;
+
+			a {
+				color: $c-candlelight;
+				font-size: 26px;
+				position: relative;
+
+				&:hover {
+
+					&:after {
+						@include transition(400ms all);
+						width: 100%;
+					}
+				}
+
+				&:after {
+					@include transition(400ms all);
+					content: '';
+					position: absolute;
+					width: 0;
+					height: 2px;
+					background-color: $c-candlelight;
+					bottom: -5px;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	.container {
+		position: relative;
+	}
+
+}
+
+.footer-column {
+	@include span(2.5);
+	padding-top: 10px;
+
+	@include susy-breakpoint(max-width $xs-max, $map-xs) {
+		@include span(12);
+		-webkit-box-ordinal-group: 2;
+		-moz-box-ordinal-group: 2;
+		-ms-flex-order: 2;
+		-webkit-order: 2;
+		order: 2;
+	}
+
+	&:first-of-type {
+		padding-top: 0;
+
+		@include susy-breakpoint(max-width $xs-max){
+			-webkit-box-ordinal-group: 2;
+			-moz-box-ordinal-group: 2;
+			-ms-flex-order: 4;
+			-webkit-order: 4;
+			order: 4;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			clear: both;
+			list-style: none;
+
+			li {
+				@include font-roboto();
+				display: block;
+				width: 100%;
+				font-size: 14px;
+				line-height: 1.72;
+				color: $c-white;
+
+				a {
+					@include font-roboto(600);
+					color: $c-white;
+					text-decoration: none;
+
+					&:hover {
+						color: $c-candlelight;
+					}
+				}
+			}
+		}
+	}
+
+	&:last-of-type {
+		@include span(3);
+		float: right;
+		position: relative;
+    color: #fff;
+
+    p {
+      color: #fff;
+    }
+
+    ul {
+      li {
+        padding-left: 30px;
+        position: relative;
+        color: #fff;
+        margin-bottom: 5px;
+
+        &:before {
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free", FontAwesome;
+          color: #fff;
+          position: absolute;
+          top: 2px;
+          left: 0;
+          border: 1px solid #fff;
+          border-radius: 2px;
+          height: 16px;
+          width: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+
+		@include susy-breakpoint(max-width $xs-max, $map-xs) {
+			@include span(12);
+			-webkit-box-ordinal-group: 2;
+			-moz-box-ordinal-group: 2;
+			-ms-flex-order: 1;
+			-webkit-order: 1;
+			order: 1;
+			padding-bottom: 70px;
+
+			&:before {
+				display: none;
+			}
+
+			//&:after{
+			//	width: auto;
+			//	position: absolute;
+			//	height: 9px;
+			//	background-size: contain;
+			//	background-repeat: no-repeat;
+			//	background: url("../images/waves-horizontal.png");
+			//	content: '';
+			//	right: gutter();
+			//	left: gutter();
+			//	bottom: 35px;
+			//}
+		}
+    //
+		//&:before {
+		//	position: absolute;
+		//	left: -85px;
+		//	width: 9px;
+		//	height: 181px;
+		//	content: '';
+		//	background-image: url("../images/waves-blue.png");
+		//}
+
+		.footer-column__title {
+			@include font-roboto(500);
+
+			b {
+				@include font-roboto(600);
+			}
+		}
+
+    .gform_footer {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+		.subscribe {
+			position: relative;
+			margin-top: 10px;
+
+			@include susy-breakpoint(max-width $xs-max){
+				display: none;
+			}
+
+			&--mobile{
+				display: none;
+
+				@include susy-breakpoint(max-width $xs-max){
+					display: block;
+				}
+			}
+
+			input[type='text'] {
+				@include font-roboto();
+				position: relative;
+				color: #fff;
+				padding: 15px;
+				width: 100%;
+				margin-bottom: 10px;
+        display: block;
+        border-radius: 25px;
+        background: none;
+        border: 1px solid #fff;
+        height: 47px;
+			}
+
+			input[type='checkbox'] {
+				display: inline-block;
+				float: left;
+				margin-top: 3px !important;
+			}
+
+			.icheckbox_square-yellow {
+				margin-top: -25px;
+
+				@include susy-breakpoint(max-width $xs-max) {
+					margin-top: 0;
+				}
+			}
+
+			input[type='submit'] {
+				@include transition(400ms all);
+        display: block;
+        min-width: auto;
+        width: 100%;
+        background: $c-candlelight;
+        color: $c-big-stone;
+
+				&:hover {
+					@include transition(400ms all);
+					background-color: darken($c-candlelight, 10);
+				}
+			}
+
+			label.gfield_label {
+				display: none;
+			}
+
+			li.gfield {
+				margin: 0;
+				padding: 0;
+			}
+
+			.gfield_error.gfield_contains_required div.ginput_container {
+				margin-top: 0 !important;
+			}
+
+			.ginput_container_checkbox {
+				margin-top: 0 !important;
+
+				input {
+					margin-top: 3px !important;
+					margin-right: 3px;
+				}
+
+				label {
+					color: #FFF;
+					padding-left: 10px;
+
+					a {
+						color: #FFF;
+					}
+				}
+			}
+
+			.gfield_description.validation_message {
+				color: $c-candlelight;
+			}
+
+			.validation_error {
+				display: none;
+			}
+
+			.gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+				border: 0;
+			}
+
+			.gform_wrapper li.gfield.gfield_error {
+				border: 0;
+				background: none;
+			}
+
+			.gfield_description {
+				padding: 0;
+			}
+		}
+	}
+
+	&__title {
+		@include font-roboto();
+		color: $c-candlelight;
+		margin: 0;
+		font-size: 16px;
+		line-height: 1;
+		display: block;
+
+		@include susy-breakpoint(max-width $xs-max) {
+			font-weight: 700;
+		}
+	}
+
+	&__title--white {
+		color: $c-white;
+	}
+
+	&__read-more {
+		position: relative;
+
+		&:hover {
+			@include transition(400ms all);
+			color: $c-candlelight;
+
+			&:after {
+				padding-left: 10px;
+				color: $c-candlelight;
+			}
+		}
+
+		&:after {
+			@include transition(400ms all);
+			padding-left: 5px;
+			content: "»";
+		}
+	}
+
+	.footer-menu {
+		padding: 0 0 26px;
+		margin: 0;
+		clear: both;
+		list-style: none;
+
+		li {
+			@include font-roboto();
+			display: block;
+			width: 100%;
+			font-size: 14px;
+			line-height: 1.72;
+
+			a {
+				@include transition(200ms all);
+				@include font-roboto(400);
+				color: $c-white;
+				text-decoration: none;
+
+				&:hover {
+					@include transition(200ms all);
+					padding-left: 3px;
+				}
+
+				&:before {
+					content: '-';
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+.chat-box {
+	@include span(3);
+	float: right;
+	margin-top: -100px;
+	//overflow: hidden;
+	position: relative;
+
+	@include susy-breakpoint(max-width $xs-max) {
+		@include span(8);
+		@include push(2);
+		margin-top: -50px;
+	}
+
+	&__title {
+		@include font-roboto(700);
+		position: absolute;
+		top: -86px;
+		left: 0;
+		font-size: 24px;
+		width: 100%;
+		text-align: center;
+		line-height: 1.1;
+
+		&:after {
+			background-image: url("../images/arrow-footer.png");
+			content: '';
+			height: 43px;
+			width: 31px;
+			display: block;
+			position: absolute;
+			top: 15px;
+			right: 30px;
+
+			@include susy-breakpoint($md-min $md-max) {
+				top: 30px;
+			}
+
+			@include susy-breakpoint($sm-min $sm-max) {
+				top: 30px;
+				right: 15px;
+			}
+		}
+	}
+
+	.live-chat {
+		@include transition(400ms all);
+		@include font-roboto(500);
+		height: 50px;
+		line-height: 50px;
+		width: 100%;
+		text-align: center;
+		border-radius: 5px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		font-size: 18px;
+		text-transform: none;
+		position: relative;
+
+		&:after {
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			content: "\f077";
+			position: absolute;
+			left: 50%;
+			margin-left: -5px;
+			width: 10px;
+			text-align: center;
+			line-height: 1;
+			top: 2px;
+		}
+
+		&:hover {
+			@include transition(400ms all);
+			background-color: $c-big-stone;
+			color: $c-white;
+		}
+	}
+}
+
+body.home .site-footer {
+	margin-top: 0;
+}

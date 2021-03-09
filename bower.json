@@ -1,0 +1,52 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~3.2.0",
+    "normalize-scss": "~3.0.3",
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1",
+    "imagesloaded": "~3.2.0",
+    "sass-mq": "^3.3.2",
+    "slick-carousel": "~1.5.9",
+    "isotope": "~3.0.1",
+    "jquery-ui": "^1.12.1",
+    "jquery.selectBoxIt": "^3.8.2",
+    "pushy": "^1.1.2",
+    "lightbox2": "lightbox#^2.10.0",
+    "jquery-validation": "^1.17.0",
+    "iCheck": "icheck#^1.0.2",
+    "fullcalendar": "^3.9.0",
+    "webui-popover": "^2.1.15",
+    "remodal": "^1.1.1",
+    "js-cookie": "^2.2.0",
+    "chart.js": "^2.7.3",
+    "table.sort":  "^5.0.0"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "./modernizr.js"
+    },
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    },
+    "isotope": {
+      "main": "dist/isotope.pkgd.min.js",
+      "dependencies": {}
+    },
+    "jquery-validation": {
+      "main": [
+        "dist/jquery.validate.js",
+        "dist/additional-methods.js"
+      ]
+    }
+  }
+}

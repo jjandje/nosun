@@ -1,0 +1,444 @@
+{
+    "key": "group_5a941c20e4b39",
+    "title": "Home content blokken",
+    "fields": [
+        {
+            "key": "field_5a941c278f018",
+            "label": "Content blokken",
+            "name": "home_content_blocks",
+            "type": "flexible_content",
+            "instructions": "Bepaal hier de content blokken die op de home pagina getoond worden. De volgorde hieronder bepaald ook de volgorde waarin ze worden weergegeven aan de voorzijde.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5a941c478f01a": {
+                    "key": "5a941c478f01a",
+                    "name": "generic",
+                    "label": "Generieke content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a941c628f01b",
+                            "label": "Titel",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a941c758f01c",
+                            "label": "Tekstvlak",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5a941c958f01d",
+                            "label": "Button tonen?",
+                            "name": "button_enabled",
+                            "type": "true_false",
+                            "instructions": "Of er een button onderaan het blok getoond moet worden.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5a941f298f033",
+                            "label": "Button",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a941caa8f01e",
+                            "label": "Button tekst",
+                            "name": "button_text",
+                            "type": "text",
+                            "instructions": "Tekst die in de button getoond wordt.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5a941c958f01d",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a941cb98f01f",
+                            "label": "Button url",
+                            "name": "button_url",
+                            "type": "url",
+                            "instructions": "URL waar de button naar verwijst.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5a941c958f01d",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e4660751c150": {
+                    "key": "layout_5e4660751c150",
+                    "name": "trip_type",
+                    "label": "Reis type",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4660db1c151",
+                            "label": "Reis type",
+                            "name": "type",
+                            "type": "taxonomy",
+                            "instructions": "Kies hier het type reis waarvoor er reizen getoond worden.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "trip-type",
+                            "field_type": "select",
+                            "allow_null": 0,
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "object",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_5e4661521c152",
+                            "label": "Aantal",
+                            "name": "amount",
+                            "type": "number",
+                            "instructions": "Het aantal reizen dat van het gekozen reis type getoond worden.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 6,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        },
+                        {
+                            "key": "field_5e466c77ba299",
+                            "label": "Pagina link",
+                            "name": "page_link",
+                            "type": "page_link",
+                            "instructions": "Pagina waar de \"Meer <Reis type>\" button naar toe gaat.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e4661ae1c153": {
+                    "key": "layout_5e4661ae1c153",
+                    "name": "destinations",
+                    "label": "Bestemmingen",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4661b71c154",
+                            "label": "Bestemmingen",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Het volledige aantal bestemmingen wordt getoond zoals ook op de bestemmingen pagina.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5a941c2b38768": {
+                    "key": "5a941c2b38768",
+                    "name": "usps",
+                    "label": "USP's",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a941d0b8f021",
+                            "label": "USP's",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Beheer onder Site-instellingen -> USP's",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e466a08ba297": {
+                    "key": "layout_5e466a08ba297",
+                    "name": "guarantees",
+                    "label": "Garanties",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e466a08ba298",
+                            "label": "Garanties",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Beheer de garanties onder noSun instellingen -> USP's",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e466f3a99896": {
+                    "key": "layout_5e466f3a99896",
+                    "name": "newsletter",
+                    "label": "Nieuwsbrief",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e466f4599897",
+                            "label": "Nieuwsbrief",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Beheer de nieuwsbrief onder noSun instellingen -> Social Media",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e466f9a99898": {
+                    "key": "layout_5e466f9a99898",
+                    "name": "vlogs",
+                    "label": "Vlogs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e466f9a99899",
+                            "label": "Vlogs",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Beheer de vlogs onder noSun instellingen -> Social Media",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5a941d018f020": {
+                    "key": "5a941d018f020",
+                    "name": "popular",
+                    "label": "Populaire reizen",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a941d818f023",
+                            "label": "Populaire reizen",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Beheer onder Site-instellingen -> Populaire reizen",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e4693faa80b9": {
+                    "key": "layout_5e4693faa80b9",
+                    "name": "lastminutes",
+                    "label": "Lastminutes",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e469401a80ba",
+                            "label": "Aantal",
+                            "name": "amount",
+                            "type": "number",
+                            "instructions": "Maximum aantal lastminutes dat getoond wordt.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Nieuw content blok",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "77"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Home",
+    "modified": 1581683776
+}

@@ -1,0 +1,118 @@
+{
+    "key": "group_5c7d41c3f0db0",
+    "title": "Extra Producten",
+    "fields": [
+        {
+            "key": "field_5c7d41e22d029",
+            "label": "Assumax Id",
+            "name": "_extra_product_assumax_id",
+            "type": "text",
+            "instructions": "De unieke identifier waaronder dit extra product bekend is in het ERP systeem.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c7d423e2d02a",
+            "label": "Beschrijving",
+            "name": "_extra_product_description",
+            "type": "text",
+            "instructions": "De beschrijving van het extra product.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c7d429e2d02b",
+            "label": "BTW Tarief Id",
+            "name": "_extra_product_vatrate_id",
+            "type": "text",
+            "instructions": "Het Id van het BTW tarief zoals bekend is in het ERP.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c7d44472d02c",
+            "label": "Prijs",
+            "name": "_extra_product_price",
+            "type": "number",
+            "instructions": "De prijs van het extra product.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "extraproduct"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "Gegevens van de extra producten. Deze producten worden automatisch gesynchroniseerd met de database, lokale wijzigingen worden niet gehonoreerd!",
+    "modified": 1551713408
+}

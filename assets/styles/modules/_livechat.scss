@@ -1,0 +1,36 @@
+#livechat-compact-container {
+	//opacity: 0 !important;
+	bottom: -53px !important;
+
+	iframe {
+		#full-view-button {
+			display: none !important;
+		}
+	}
+
+	#content #full-view-button{
+		display: none !important;
+	}
+}
+
+#full-view-button {
+	display: none !important;
+}
+
+#livechat-full{
+
+}
+
+#content #full-view-button{
+	display: none !important;
+}
+
+#livechat-eye-catcher{
+	display: none !important;
+}
+
+@include susy-breakpoint(max-width $xs-max){
+	#livechat-compact-container{
+		display: none !important;
+	}
+}

@@ -1,0 +1,109 @@
+{
+    "key": "group_5a9427f75e548",
+    "title": "Populaire reizen",
+    "fields": [
+        {
+            "key": "field_5a942806bc283",
+            "label": "Populaire reizen",
+            "name": "option_popular",
+            "type": "repeater",
+            "instructions": "Kies hier de templates welke worden weergegeven als populaire reizen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 6,
+            "layout": "row",
+            "button_label": "Populaire reis toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_5a942870bc286",
+                    "label": "Template",
+                    "name": "template",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "template"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_5be02fa8925c3",
+            "label": "Weergeven op",
+            "name": "options_popular_pages",
+            "type": "repeater",
+            "instructions": "Op de pagina's die hier worden toegevoegd worden net zoals op de home pagina ook de populaire reizen weergegeven.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5be03014925c4",
+                    "label": "Pagina",
+                    "name": "options_popular_page",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-populaire-reizen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Options -> Populaire reizen",
+    "modified": 1562069029
+}

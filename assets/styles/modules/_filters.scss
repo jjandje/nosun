@@ -1,0 +1,45 @@
+.blog-filters {
+	@include span(12);
+	padding-bottom: 20px;
+	text-align: center;
+
+	@include susy-breakpoint(max-width $xs-max, $map-xs) {
+		@include span(12);
+	}
+
+	ul {
+
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			margin-bottom: 10px;
+
+			a {
+				@include transition(400ms all);
+				padding: 7px 20px;
+				display: block;
+				border: 1px solid $c-big-stone;
+				background: $c-white;
+				border-radius: 5px;
+				line-height: 1;
+				text-decoration: none;
+				color: $c-big-stone;
+
+				&.active {
+					background-color: $c-big-stone;
+					color: $c-white;
+				}
+
+				&:hover {
+					@include transition(400ms all);
+					background-color: $c-big-stone;
+					color: $c-white;
+				}
+
+				@include susy-breakpoint(max-width $xs-max, $map-xs) {
+					padding: 7px 10px;
+				}
+			}
+		}
+	}
+}

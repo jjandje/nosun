@@ -1,0 +1,81 @@
+{
+    "key": "group_5bd304fc418c5",
+    "title": "Alternatieve Templates",
+    "fields": [
+        {
+            "key": "field_5bd30504f1f30",
+            "label": "Alternatieve Templates",
+            "name": "alternative_templates",
+            "type": "repeater",
+            "instructions": "Voeg hier templates toe welke als alternatief getoond worden wanneer deze categorie geen eigen templates bevat.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Nieuw Alternatief",
+            "sub_fields": [
+                {
+                    "key": "field_5bd30519f1f31",
+                    "label": "Alternatief",
+                    "name": "template",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "template"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "destination"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "trip-type"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "age-group"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1587647631
+}

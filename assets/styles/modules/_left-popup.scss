@@ -1,0 +1,61 @@
+.left-popup{
+	position: fixed;
+	top: 18%;
+	width: 350px;
+	height: 550px;
+	background: white;
+	z-index: 99;
+	-webkit-box-shadow: 6px 7px 23px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 6px 7px 23px 0px rgba(0,0,0,0.1);
+	box-shadow: 6px 7px 23px 0px rgba(0,0,0,0.1);
+	left: -400px;
+	@include transition(all 1000ms);
+
+	@include breakpoint(max-width $xs-max) {
+		transform: scale(0.7, 0.7);
+		top: 10%;
+
+		&.show{
+			left: -57px !important;
+		}
+	}
+
+	@include breakpoint(max-width 349px){
+		transform: scale(0.7, 0.7);
+		top: 10%;
+
+		&.show{
+			left: -57px !important;
+		}
+	}
+
+	&.show{
+		left: 0;
+	}
+
+	img{
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.inner{
+		padding: 10px 40px;
+
+		p, h3{
+			text-align: center;
+		}
+
+		a{
+			display: inline-block;
+			margin-top: 20px;
+
+			&.close{
+				color: $c-big-stone;
+				margin-left: 25px;
+			}
+		}
+
+	}
+
+}
+

@@ -1,0 +1,28 @@
+// Grid system
+$susy-columns: 12;
+$susy-column-width: 30px;
+
+$susy: (
+		container: 1200px,
+		columns: 12,
+		gutters: .68,
+		math: fluid,
+		output: float,
+		gutter-position: inside
+);
+
+$map-md: (
+		gutters: 1
+);
+
+$map-sm: (
+		gutters: 1.4
+);
+
+$map-xs: (
+		gutters: 30
+);
+
+.container {
+	@include container;
+}

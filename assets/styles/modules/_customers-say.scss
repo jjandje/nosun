@@ -1,0 +1,39 @@
+.customers-say {
+	padding-bottom: 50px;
+
+	.block {
+		@include span(4);
+
+		@include susy-breakpoint(max-width $sm-max) {
+			@include span(12);
+		}
+
+		.inner {
+			h3 {
+				font-size: 22px;
+			}
+
+			img {
+				border-radius: 5px;
+				width: 80%;
+			}
+
+			p {
+				color: $c-big-stone;
+				display: block;
+			}
+
+			p.name {
+				font-weight: bold;
+				font-size: 18px;
+			}
+
+			p.quote {
+				font-style: italic;
+				font-size: 15px;
+				margin-bottom: 10px;
+			}
+		}
+
+	}
+}

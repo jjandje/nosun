@@ -1,0 +1,37 @@
+.pagination-container {
+	@include container();
+
+	.inner {
+		@include span(12);
+		text-align: center;
+		background: none;
+	}
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	color: $c-white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	background-color: $c-candlelight;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0.75rem;
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+	background-color: $c-big-stone;
+}

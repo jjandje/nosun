@@ -1,0 +1,278 @@
+.chatContainer {
+	padding-top: 50px;
+	padding-bottom: 150px;
+
+	.ajaxChat {
+		margin: 0;
+		padding: 0;
+		box-shadow: none;
+		width: 100%;
+		max-width: 100%;
+		position: relative;
+
+		textarea {
+			float: left;
+			width: 80% !important;
+			height: 145px;
+			border-radius: 0;
+			border-top: 0;
+			border-color: #cecece;
+
+			@include susy-breakpoint(max-width $xs-max){
+				float:none;
+				display: block;
+				width: 100% !important;
+			}
+		}
+
+		input[type="submit"] {
+			float: left;
+			width: 20%;
+			height: 45px;
+			border-radius: 0;
+
+			@include susy-breakpoint(max-width $xs-max){
+				float:none;
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.loading {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			background: #eeeef2;
+			line-height: 60px;
+
+			&.active {
+				display: block;
+			}
+		}
+
+	}
+}
+
+.chatSummary {
+	@include span(4);
+	background: $c-catskill-white;
+
+	@include susy-breakpoint(max-width $xs-max, $map-xs) {
+		@include span(12);
+	}
+
+	ul {
+
+		li {
+			margin-bottom: 15px;
+			position: relative;
+
+			img {
+				display: inline-block;
+				float: left;
+			}
+
+		}
+	}
+
+	table {
+		background: $c-white;
+		width: 100%;
+
+		thead {
+			tr {
+				border-bottom: 1px solid $c-catskill-white;
+
+				td {
+					padding: 15px 15px 12px;
+					font-weight: 700;
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				td {
+					padding: 8px 15px;
+				}
+
+			}
+		}
+	}
+
+	&__user {
+		display: inline-block;
+		float: left;
+		padding-left: 15px;
+	}
+
+	&__age {
+		display: block;
+	}
+
+	&__name {
+		@include font-roboto(700);
+		display: block;
+		font-size: 18px;
+		padding-top: 5px;
+	}
+
+	&__guide {
+		position: absolute;
+		line-height: 40px;
+		top: 50%;
+		right: 30px;
+		margin-top: -25px;
+		color: #17253f;
+		border-radius: 5px;
+		height: 40px;
+		padding: 0 10px;
+		background: $c-candlelight;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.border {
+		@include span(12);
+		height: 3px;
+		background-color: $c-white;
+		margin-bottom: 20px;
+	}
+}
+
+.chatWrapper {
+	@include span(8);
+	//@include push(1);
+
+	@include susy-breakpoint(max-width $xs-max, $map-xs) {
+		@include span(12);
+	}
+
+	.chatWrapper-inner {
+		border: 1px solid #cecece;
+	}
+}
+
+.chat-container {
+	height: calc(100vh - 167px);
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #f7f7f7;
+
+	.message {
+		display: block;
+		margin-bottom: 20px;
+		@include clearfix();
+		padding-right: 20px;
+
+		&:first-of-type {
+			margin-top: 20px;
+		}
+
+		&__profile {
+			display: inline-block;
+			float: right;
+
+			img {
+				height: 45px;
+				width: auto;
+				display: block;
+			}
+
+			span {
+				display: block;
+				text-align: center;
+				font-size: 13px;
+				margin-top: 2px;
+			}
+		}
+
+		.inner {
+			margin-right: 20px;
+			float: right;
+			padding: 30px 22px 22px 22px;
+			position: relative;
+			box-shadow: 0 6px 20px rgba(41, 37, 91, .08), inset 0 1px 1px rgba(0, 0, 0, .05);
+			border: 1px solid #eee;
+			border-radius: 3px;
+			min-width: 200px;
+			background: $c-catskill-white;
+			color: #17253f;
+
+			span {
+				position: absolute;
+				top: 5px;
+				right: 22px;
+				font-size: 13px;
+			}
+
+			p {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+		}
+
+		&--other {
+			float: left;
+			padding-left: 20px;
+
+			.message__profile {
+				float: left;
+			}
+
+			.inner {
+				background: $c-white;
+				margin-left: 20px;
+				margin-right: 0;
+			}
+
+			.message {
+			}
+		}
+
+		&--nosun {
+			float: left;
+			padding-left: 20px;
+			width: 100%;
+
+			.message__profile {
+				float: left;
+			}
+
+			.inner {
+				background: $c-candlelight;
+				margin-left: 20px;
+				margin-right: 0;
+				width: 75%;
+				display: inline-block;
+				float: none;
+				color: #17253f;
+			}
+		}
+	}
+
+	.last-message {
+		@include transition(300ms all);
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+
+		&.active {
+			height: auto;
+			opacity: 1;
+		}
+
+	}
+
+}
+
+#chatMessagePlaceholder, #noProfileImage {
+	display: none;
+}
+

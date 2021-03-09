@@ -1,0 +1,132 @@
+.slick-list {
+	height: 100%;
+}
+
+.slick-slider {
+	height: 100%;
+	margin-bottom: 0;
+}
+
+.slick-track {
+	height: 100%;
+}
+
+.slick-prev {
+	@include transition(400ms all);
+	left: -50px;
+	height: 50px;
+	width: 50px;
+	background-color: $c-candlelight;
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	border: 0;
+	opacity: 1;
+	z-index: 1;
+
+	@include susy-breakpoint($xs-max $sm-max) {
+		left: -50px;
+	}
+
+	&:hover {
+		@include transition(400ms all);
+		opacity: 1;
+		background-color: $c-candlelight;
+	}
+
+	&:focus {
+		@include transition(400ms all);
+		background-color: $c-candlelight;
+		opacity: 1;
+	}
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url("../images/slider-arrow-left.png");
+		background-repeat: no-repeat;
+		content: '';
+		background-position: center center;
+	}
+}
+
+.slick-next {
+	@include transition(400ms all);
+	right: -50px;
+	height: 50px;
+	width: 50px;
+	background-color: $c-candlelight;
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	border: 0;
+	opacity: 1;
+	text-indent: -10px;
+	z-index: 1;
+
+	@include susy-breakpoint($xs-max $sm-max) {
+		right: -50px;
+	}
+
+	&:focus {
+		@include transition(400ms all);
+		background-color: $c-candlelight;
+		opacity: 1;
+	}
+
+	&:hover {
+		@include transition(400ms all);
+		opacity: 1;
+		background-color: $c-candlelight;
+	}
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url("../images/slider-arrow-right.png");
+		background-repeat: no-repeat;
+		content: '';
+		background-position: center center;
+	}
+}
+
+.slider-popular-products {
+
+	.slick-track{
+		display: flex;
+
+		@include susy-breakpoint(max-width $xs-max){
+			display: block;
+		}
+	}
+
+	.slick-slide{
+		height: auto;
+		align-items: center; //optional
+		justify-content: center; //optional
+
+		@include susy-breakpoint(max-width $xs-max){
+			display: block;
+		}
+	}
+
+	.trip-blocks__trip {
+		position: relative;
+		padding-bottom: 90px;
+
+
+	}
+
+}
+
+.slick-list {
+	.slick-loading & {
+		background: #fff url("../images/ajax-loader.gif") center center no-repeat;
+	}
+}

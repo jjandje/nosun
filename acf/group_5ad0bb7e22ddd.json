@@ -1,0 +1,98 @@
+{
+    "key": "group_5ad0bb7e22ddd",
+    "title": "E-mail Templates",
+    "fields": [
+        {
+            "key": "field_5ad0bba1edc5d",
+            "label": "Onderwerp",
+            "name": "email_subject",
+            "type": "text",
+            "instructions": "Het onderwerp van de e-mail.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e831374e9d05",
+            "label": "Bijlagen",
+            "name": "email_attachments",
+            "type": "repeater",
+            "instructions": "De bijlagen die bij de e-mail worden gevoegd.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5e8313f9e9d06",
+                    "label": "Bijlage",
+                    "name": "attachment",
+                    "type": "file",
+                    "instructions": "Kies hier de bijlage door een nieuwe te uploaden of door een bestaande uit de bibliotheek te kiezen.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5e85f650d3ca5",
+            "label": "Link",
+            "name": "email_link",
+            "type": "link",
+            "instructions": "Link naar een pagina die wordt gekoppeld aan de knop onderaan de e-mail. De knop wordt niet getoond wanneer er geen link is ingevuld.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "email"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1586096378
+}

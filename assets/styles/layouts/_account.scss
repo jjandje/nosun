@@ -1,0 +1,687 @@
+.nosun-account {
+}
+
+.message {
+  @include span(12);
+  margin-bottom: 30px;
+
+  .inner {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+}
+
+.tour-information {
+  padding-top: 90px;
+
+  @include susy-breakpoint(max-width $xs-max) {
+    padding-top: 40px;
+  }
+
+  &__column {
+    @include span(5);
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12);
+    }
+
+    &:last-of-type {
+      @include push(1);
+      @include span(6);
+
+      @include susy-breakpoint(max-width $xs-max, $map-xs) {
+        @include span(12);
+        @include push(0);
+      }
+    }
+
+    &.account-column {
+      @include span(4);
+
+      @include susy-breakpoint(max-width $xs-max, $map-xs) {
+        @include span(12);
+      }
+    }
+  }
+
+  &__profile {
+    img {
+      display: inline-block;
+      float: left;
+    }
+
+    ul {
+      display: inline-block;
+      float: left;
+      margin: 0;
+      padding: 0 0 0 30px;
+
+      @include susy-breakpoint($sm-min $sm-max) {
+        padding: 20px 0;
+        display: block;
+        float: none;
+        clear: both;
+      }
+
+      li {
+        line-height: 1;
+
+        span {
+          @include font-roboto(700);
+          color: #c9398d;
+          line-height: 1;
+          font-size: 24px;
+          display: block;
+          padding-bottom: 20px;
+        }
+
+        a {
+          line-height: 1.6;
+          color: $c-big-stone;
+
+          i {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid $c-catskill-white;
+    padding-bottom: 50px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.08;
+
+      i {
+        padding-right: 10px;
+        font-size: 18px;
+        float: left;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  &__files, &__payments {
+
+    thead {
+
+      tr {
+        background-color: #FFF;
+        border-bottom: 1px solid $c-big-stone;
+
+        td {
+          padding: 8px 10px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background-color: #fff;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #eaeef4;
+      }
+
+      tr {
+
+        td {
+          border-right: 1px solid #FFF;
+          padding: 8px 10px;
+          color: #333333;
+
+          i {
+            color: $c-big-stone;
+            font-size: 15px;
+            line-height: 1;
+
+            &.fa-file-pdf {
+              font-size: 22px;
+            }
+
+            &.fa-download {
+              padding-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  table {
+    @include font-roboto();
+    width: 100%;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  table a {
+    color: #333;
+    text-decoration: underline;
+  }
+
+  table.note {
+    margin-bottom: 15px;
+  }
+
+  .innertable {
+    border-width: 0 1px 0 0;
+    padding: 0;
+  }
+
+  .innertable table {
+    border: 0;
+  }
+
+  .innertable table td {
+    border-width: 0 0 1px 0;
+  }
+
+  thead, .thead {
+    font-size: 1em;
+    color: #555;
+  }
+
+  th, td {
+    padding: 0.4em 0;
+    color: $c-mine-shaft;
+    font-size: 15px;
+  }
+}
+
+.information-column {
+
+  .information-title {
+    margin-top: 0;
+  }
+
+  .tour-information__row {
+    border-color: $c-mine-shaft;
+    padding-bottom: 30px;
+    position: relative;
+  }
+
+  .loading-message {
+  }
+
+  .inner {
+    background: $c-catskill-white;
+    padding: 20px 25px;
+    border-radius: 5px;
+  }
+
+  table {
+    background: $c-white;
+
+    thead {
+      tr {
+        border-bottom: 1px solid $c-catskill-white;
+
+        td {
+          padding: 15px 15px 12px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 8px 15px;
+        }
+
+      }
+    }
+  }
+}
+
+.modal-add-insurance {
+  .question {
+    padding: 20px;
+    background: #f7f7f7;
+    text-align: left;
+    margin-bottom: 20px;
+
+    p {
+      font-size: 15px;
+      margin: 0 0 15px 0;
+      font-weight: bold;
+    }
+  }
+
+  .answers {
+
+    label {
+      margin-right: 20px;
+      font-size: 15px;
+    }
+  }
+
+  .cancel-btn {
+    color: #919191;
+    background: none;
+    border: 0;
+  }
+
+  button {
+    margin: 0 6px;
+    padding: 15px 30px;
+
+    &.cancel-btn {
+      &:hover {
+        background: #e3e3e3;
+      }
+    }
+
+    &[type="submit"] {
+    }
+  }
+
+}
+
+.modal-add-extra-product {
+  .cancel-btn {
+    color: #919191;
+    background: none;
+    border: 0;
+  }
+
+  button {
+    margin: 0 6px;
+    padding: 15px 30px;
+
+    &.cancel-btn {
+      &:hover {
+        background: #e3e3e3;
+      }
+    }
+
+    &[type="submit"] {
+    }
+  }
+}
+
+.account-table-rows {
+  @include span(8);
+
+  @include susy-breakpoint(max-width $xs-max, $map-xs) {
+    @include span(12);
+  }
+
+  @include susy-breakpoint($sm-min $sm-max, $map-sm) {
+    @include span(12);
+  }
+
+  &__row {
+    padding-bottom: 20px;
+  }
+
+  table {
+
+    thead {
+      @include susy-breakpoint(max-width $xs-max) {
+        display: none;
+      }
+    }
+
+    td {
+      @include susy-breakpoint(max-width $xs-max) {
+        display: block;
+        width: auto !important;
+      }
+
+      &.trip-max-width {
+        width: 210px;
+      }
+
+      &.option-status {
+        color: #ffd517;
+      }
+
+      &.td-btn {
+        text-align: right;
+      }
+
+      .mobileTitle {
+        display: none;
+        font-weight: bold;
+
+        @include susy-breakpoint(max-width $xs-max) {
+          display: block;
+        }
+      }
+
+      a {
+        @include transition(400ms all);
+        text-transform: none;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 0;
+        position: relative;
+        background: #c9398d;
+        color: #fff;
+        border-radius: 10px;
+        padding: 5px 28px 5px 16px;
+
+        &:after {
+          @include transition(400ms all);
+          height: 10px;
+          width: 6px;
+          background-size: cover;
+          position: absolute;
+          margin-left: 7px;
+          margin-top: 5px;
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          content: "\f054";
+          font-size: 12px;
+        }
+
+        &:hover {
+          background: #b7327f;
+
+          &:after {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &__not-found {
+    text-align: center;
+  }
+}
+
+.edit-account {
+
+  &__column {
+    @include span(5);
+    @include push(1);
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12);
+      @include push(0);
+    }
+
+    @include susy-breakpoint($sm-min $sm-max, $map-sm) {
+      @include span(12);
+      @include push(0);
+    }
+
+    &.no-left-padding {
+      @include push(0);
+    }
+
+    li {
+      padding: 9px 5px;
+      float: left;
+      width: 100%;
+      box-sizing: border-box;
+      white-space: nowrap;
+
+      label {
+        display: block;
+      }
+
+      label.error {
+        margin-top: 25px;
+
+        @include susy-breakpoint(max-width $sm-max) {
+          margin-top: 43px;
+        }
+
+      }
+
+      label.error {
+        display: block;
+        float: left;
+        color: #e2ac4f;
+        line-height: 1.5;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .loading {
+    display: none;
+
+    &.show {
+      display: inline-block;
+    }
+  }
+
+  .password-wrapper {
+    @include span(5);
+    @include push(1);
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12);
+      @include push(0);
+    }
+
+    input {
+      max-width: 100%;
+      background: #fff;
+      border-radius: 5px;
+      color: #333 !important;
+      padding: 15px !important;
+      border: 1px solid #999;
+      width: 100% !important;
+    }
+
+    button {
+      @extend .btn;
+      @extend .btn--blue;
+      @extend .btn--padding;
+    }
+  }
+}
+
+.nosun-login {
+
+  &__login {
+    text-align: center;
+
+    @include susy-breakpoint(max-width $xs-max) {
+      text-align: left;
+    }
+  }
+
+  .login-btn {
+    @include font-roboto(500);
+    padding: 12px 30px;
+    text-transform: none;
+    font-size: 14px;
+  }
+
+  #bookform, #loginform {
+    @include span(9);
+    @include push(1.5);
+    padding: 0;
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12);
+      @include push(0);
+    }
+  }
+
+  .login-popup {
+    padding-top: 40px;
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    button {
+      padding-top: 10px;
+    }
+
+    &__remember {
+      padding-top: 20px;
+      label {
+        font-weight: 400;
+        color: #666666;
+        width: auto;
+        display: inline-block;
+        padding-right: 30px;
+      }
+
+      a {
+        color: $c-mine-shaft;
+        text-decoration: underline;
+        font-weight: 400;
+      }
+    }
+
+    .woocommerce-Button {
+      @include font-roboto();
+      @extend .btn;
+      @extend .btn--grey;
+      @extend .btn--arrow-white;
+      font-weight: 500;
+      text-transform: none;
+      font-size: 14px;
+      padding: 12px 30px;
+    }
+  }
+
+  &__column_full {
+    @include span(12);
+  }
+
+  &__column {
+    @include span(6);
+    margin-bottom: gutter()*3;
+
+    @include susy-breakpoint(max-width $xs-max, $map-xs) {
+      @include span(12 nest);
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      text-align: left;
+    }
+
+    li {
+      float: left;
+      width: 100%;
+      box-sizing: border-box;
+      white-space: nowrap;
+
+      &.checkbox {
+        padding-top: 36px;
+        display: flex;
+        white-space: normal;
+
+        input {
+          display: inline-block;
+          float: left;
+          width: auto;
+          margin-top: 3px;
+          margin-right: 5px;
+        }
+
+        label {
+          font-weight: 400;
+          color: #666666;
+          width: auto;
+          display: inline-block;
+        }
+      }
+    }
+
+    a {
+      color: $c-mine-shaft;
+      text-decoration: underline;
+      font-weight: 400;
+    }
+
+  }
+
+  &__column--push {
+    @include push(3);
+
+    @include susy-breakpoint(max-width $xs-max) {
+      @include push(0);
+    }
+  }
+
+  &__submit {
+    text-align: center;
+
+    .btn {
+      @include font-roboto(700);
+      padding: 20px 55px;
+      line-height: 1;
+      font-size: 24px;
+      border-radius: 50px;
+      border: 0;
+
+      &:after {
+        font-size: 20px;
+      }
+    }
+
+    ul {
+      padding-top: 10px;
+
+      li {
+        display: inline-block;
+        font-size: 13px;
+        padding-right: 30px;
+        font-weight: 400;
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+
+        label {
+          font-weight: 400;
+        }
+
+        a {
+          color: $c-mine-shaft;
+          text-decoration: underline;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.wpua-edit {
+  @include span(10);
+  @include push(1);
+
+  #wpua-thumbnail-existing {
+    display: none;
+  }
+
+  #wpua-undo-button-existing {
+    display: none;
+  }
+
+  .description {
+    display: none;
+  }
+
+  button.button, input[type="submit"] {
+    @extend .btn;
+    @extend .btn--blue;
+    @extend .btn--padding;
+  }
+
+}

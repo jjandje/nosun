@@ -1,0 +1,329 @@
+@mixin row {
+	@include break;
+	@include susy-clearfix;
+	margin-left: -$susy-gutter-width;
+	margin-right: -$susy-gutter-width;
+}
+
+/**
+ * Whole site wrap
+ */
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	@include font-roboto();
+	//padding-top: 144px;
+	overflow-x:hidden;
+
+	@include susy-breakpoint(max-width $xs-max){
+		//padding-top: 127px;
+	}
+
+	@include susy-breakpoint($sm-min $sm-max){
+		//padding-top: 91px;
+	}
+
+	&.admin-bar{
+
+		.site-header{
+			top: 32px;
+		}
+	}
+
+	&.home{
+		padding-top: 0;
+	}
+}
+
+@include susy-breakpoint(max-width $xs-max){
+	html, body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+p{
+	color: $c-mine-shaft;
+	font-size: 15px;
+	line-height: 1.73;
+
+	img{
+		@include img-responsive();
+	}
+}
+
+span, li{
+	color: $c-mine-shaft;
+	font-size: 15px;
+	line-height: 1.73;
+}
+
+ul{
+	padding: 0;
+	list-style: none;
+}
+
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.text-uppercase{
+	text-transform: uppercase;
+}
+
+
+/**
+ * Backgrounds
+ */
+.bg-grey{
+	background-color: $c-catskill-white;
+}
+
+.bg-yellow{
+	background-color: $c-candlelight;
+
+	p {
+		text-align: center;
+		width: 60%;
+		display: block;
+		margin: 0 auto;
+		font-size: 16px;
+		color: $c-big-stone;
+		margin-bottom: 40px;
+
+		@include susy-breakpoint(max-width $xs-max){
+			width: 100%;
+		}
+	}
+}
+
+.p--width-60 {
+  text-align: center;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  color: $c-big-stone;
+  margin-bottom: 40px;
+
+  @include susy-breakpoint(max-width $xs-max){
+    width: 100%;
+  }
+}
+
+.bg-blue{
+	background-color: $c-big-stone;
+}
+
+
+/**
+ * Paddings
+ */
+.padding-top{
+	padding-top: 60px;
+}
+
+.padding-bottom{
+	padding-bottom: 60px;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background: $c-big-stone;
+}
+
+/**
+voor later
+ */
+//#loading {
+//	width: 100%;
+//	height: 100%;
+//	top: 0;
+//	left: 0;
+//	position: fixed;
+//	display: block;
+//	opacity: 0.7;
+//	background-color: #fff;
+//	z-index: 9999;
+//	text-align: center;
+//}
+//
+//#loading-image {
+//	position: absolute;
+//	top: 100px;
+//	left: 240px;
+//	z-index: 10000;
+//}
+
+
+//body:after {
+//	position: absolute;
+//	display: block;
+//	background: red;
+//	content: "LG";
+//	width: 40px;
+//	height: 40px;
+//	right: 0;
+//	top: 70px;
+//	z-index: 10000;
+//	color: white;
+//	text-align: center;
+//	line-height: 40px;
+//
+//	@include breakpoint(max-width $xs-max) {
+//		content: "XS";
+//		background: green;
+//	}
+//
+//	@include breakpoint($sm-min $sm-max) {
+//		content: "SM";
+//		background: yellow;
+//	}
+//
+//	@include breakpoint($md-min $md-max) {
+//		content: "MD";
+//		background: blue;
+//	}
+//}
+
+/* iCheck plugin Minimal skin, black
+----------------------------------- */
+/* iCheck plugin Square skin, yellow
+----------------------------------- */
+.icheckbox_square-yellow,
+.iradio_square-yellow {
+	display: inline-block;
+	*display: inline;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	width: 22px;
+	height: 22px;
+	background: url(../images/yellow.png) no-repeat;
+	border: none;
+	cursor: pointer;
+}
+
+.icheckbox_square-yellow {
+	background-position: 0 0;
+}
+.icheckbox_square-yellow.hover {
+	background-position: -24px 0;
+}
+.icheckbox_square-yellow.checked {
+	background-position: -48px 0;
+}
+.icheckbox_square-yellow.disabled {
+	background-position: -72px 0;
+	cursor: default;
+}
+.icheckbox_square-yellow.checked.disabled {
+	background-position: -96px 0;
+}
+
+.iradio_square-yellow {
+	background-position: -120px 0;
+}
+.iradio_square-yellow.hover {
+	background-position: -144px 0;
+}
+.iradio_square-yellow.checked {
+	background-position: -168px 0;
+}
+.iradio_square-yellow.disabled {
+	background-position: -192px 0;
+	cursor: default;
+}
+.iradio_square-yellow.checked.disabled {
+	background-position: -216px 0;
+}
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+	.icheckbox_square-yellow,
+	.iradio_square-yellow {
+		background-image: url(../images/yellow@2x.png);
+		-webkit-background-size: 240px 24px;
+		background-size: 240px 24px;
+	}
+}
+
+
+.nosun-notice{
+	position: fixed;
+	top: 0;
+	color: $c-big-stone;
+	background: $c-candlelight;
+	width: 100%;
+	left: 0;
+	z-index: 1000;
+	text-align: center;
+	padding: 10px 30px;
+
+	a{
+		color: $c-big-stone;
+		font-weight: bold;
+	}
+
+	i{
+		cursor: pointer;
+	}
+}
+
+#cookie-notice{
+	color: $c-white !important;
+
+	#cn-notice-text{
+		color: $c-white !important;
+	}
+
+	#cn-accept-cookie, #cn-more-info{
+		background: none;
+		border: none;
+		box-shadow: none;
+		text-shadow: none;
+		vertical-align: unset;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+.cap{
+	text-transform: capitalize !important;
+}
+
+iframe{
+	@include susy-breakpoint(max-width $xs-max){
+		max-width: 100%;
+	}
+}
+
+.fb-login{
+	margin: 58px 0;
+	display: block;
+}
+body.search.post-type-archive-destination .filters>.inner,
+.alle-reizen .filters>.inner {
+	position: relative;
+	z-index: 2;
+}
